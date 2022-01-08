@@ -4,18 +4,18 @@
 (* top =  1  *)
 (* generator = "Amaranth" *)
 module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in);
-  reg \$auto$verilog_backend.cc:2082:dump_module$79  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$175  = 0;
   (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
   wire \$1 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
   wire \$10 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
   wire \$12 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:131" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:131" *)
   wire \$14 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:134" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:134" *)
   wire [6:0] \$16 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:134" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:134" *)
   wire [6:0] \$17 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
   wire \$19 ;
@@ -25,7 +25,7 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
   wire \$23 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
   wire \$25 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:137" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:137" *)
   wire \$27 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
   wire \$29 ;
@@ -33,42 +33,42 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
   wire \$3 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
   wire \$31 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:138" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:138" *)
   wire \$33 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:157" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:157" *)
   wire [20:0] \$35 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:157" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:157" *)
   wire [20:0] \$36 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:127" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:127" *)
   wire \$5 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:130" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:130" *)
   wire [4:0] \$7 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:130" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:130" *)
   wire [4:0] \$8 ;
   (* \amaranth.sample_reg  = 32'd1 *)
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:95" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:95" *)
   reg \$sample$s$clock_out$sync$1  = 1'h0;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:95" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:95" *)
   wire \$sample$s$clock_out$sync$1$next ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input clk;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:12" *)
   wire clk_divider_clock_enable_in;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:95" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:95" *)
   wire clk_divider_clock_out;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:121" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:121" *)
   reg [3:0] count1 = 4'h0;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:121" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:121" *)
   reg [3:0] \count1$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:122" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:122" *)
   reg [5:0] count2 = 6'h00;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:122" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:122" *)
   reg [5:0] \count2$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:22" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:22" *)
   wire [17:0] ds_signal_in;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:23" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:23" *)
   wire ds_signal_out;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:24" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:24" *)
   wire ds_strobe_in;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:25" *)
   wire fir_enable_in;
@@ -76,45 +76,45 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
   reg [17:0] fir_signal_in;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:27" *)
   wire [17:0] fir_signal_out;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:72" *)
   input [17:0] pcm_data_in;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:71" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:71" *)
   output pcm_strobe_in;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:69" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:69" *)
   output pdm_clock_out;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:70" *)
   output pdm_data_out;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input rst;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:123" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:123" *)
   reg strobe0 = 1'h0;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:123" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:123" *)
   reg \strobe0$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:124" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:124" *)
   reg strobe1 = 1'h0;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:124" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:124" *)
   reg \strobe1$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:125" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:125" *)
   reg strobe2 = 1'h0;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:125" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:125" *)
   reg \strobe2$next ;
   assign \$10  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
   assign \$12  = \$10  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
-  assign \$14  = ! (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:131" *) count2;
-  assign \$17  = count2 - (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:134" *) 1'h1;
+  assign \$14  = ! (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:131" *) count2;
+  assign \$17  = count2 - (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:134" *) 1'h1;
   assign \$1  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
   assign \$19  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
   assign \$21  = \$19  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
   assign \$23  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
   assign \$25  = \$23  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
-  assign \$27  = ! (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:137" *) count1;
+  assign \$27  = ! (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:137" *) count1;
   assign \$29  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
   assign \$31  = \$29  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
-  assign \$33  = ! (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:138" *) count2;
-  assign \$36  = $signed(fir_signal_out) * (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:157" *) $signed(18'h00004);
+  assign \$33  = ! (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:138" *) count2;
+  assign \$36  = $signed(fir_signal_out) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:157" *) $signed(18'h00004);
   assign \$3  = \$1  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
-  assign \$5  = ! (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:127" *) count1;
-  assign \$8  = count1 - (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:130" *) 1'h1;
+  assign \$5  = ! (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:127" *) count1;
+  assign \$8  = count1 - (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:130" *) 1'h1;
   always @(posedge clk)
     \$sample$s$clock_out$sync$1  <= clk_divider_clock_out;
   always @(posedge clk)
@@ -148,19 +148,19 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     .signal_out(fir_signal_out)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$79 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$175 ) begin end
     \count1$next  = count1;
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:126" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:126" *)
     casez (\$3 )
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:126" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:126" */
       1'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:127" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:127" *)
           casez (\$5 )
-            /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:127" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:127" */
             1'h1:
                 \count1$next  = 4'hb;
-            /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:129" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:129" */
             default:
                 \count1$next  = \$8 [3:0];
           endcase
@@ -172,19 +172,19 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$79 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$175 ) begin end
     \count2$next  = count2;
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:126" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:126" *)
     casez (\$12 )
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:126" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:126" */
       1'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:131" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:131" *)
           casez (\$14 )
-            /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:131" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:131" */
             1'h1:
                 \count2$next  = 6'h2f;
-            /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:133" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:133" */
             default:
                 \count2$next  = \$17 [5:0];
           endcase
@@ -196,14 +196,14 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$79 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$175 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:126" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:126" *)
     casez (\$21 )
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:126" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:126" */
       1'h1:
           \strobe0$next  = 1'h1;
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:140" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:140" */
       default:
           \strobe0$next  = 1'h0;
     endcase
@@ -214,14 +214,14 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$79 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$175 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:126" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:126" *)
     casez (\$25 )
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:126" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:126" */
       1'h1:
           \strobe1$next  = \$27 ;
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:140" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:140" */
       default:
           \strobe1$next  = 1'h0;
     endcase
@@ -232,14 +232,14 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$79 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$175 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:126" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:126" *)
     casez (\$31 )
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:126" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:126" */
       1'h1:
           \strobe2$next  = \$33 ;
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:140" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:140" */
       default:
           \strobe2$next  = 1'h0;
     endcase
@@ -250,14 +250,14 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$79 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$175 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:147" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:147" *)
     casez (strobe2)
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:147" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:147" */
       1'h1:
           fir_signal_in = pcm_data_in;
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:149" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:149" */
       default:
           fir_signal_in = 18'h00000;
     endcase
@@ -278,7 +278,7 @@ endmodule
 (* \amaranth.hierarchy  = "PCM2PDM.clk_divider" *)
 (* generator = "Amaranth" *)
 module clk_divider(clock_out, rst, clk, clock_enable_in);
-  reg \$auto$verilog_backend.cc:2082:dump_module$80  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$176  = 0;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
   wire \$1 ;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:22" *)
@@ -297,10 +297,10 @@ module clk_divider(clock_out, rst, clk, clock_enable_in);
   reg [3:0] \clock_counter$next ;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:12" *)
   input clock_enable_in;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:95" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:95" *)
   output clock_out;
   reg clock_out = 1'h0;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/pcm2pdm.py:95" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:95" *)
   reg \clock_out$next ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input rst;
@@ -313,7 +313,7 @@ module clk_divider(clock_out, rst, clk, clock_enable_in);
   always @(posedge clk)
     clock_out <= \clock_out$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$80 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$176 ) begin end
     \clock_out$next  = clock_out;
     (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
     casez (\$1 )
@@ -337,7 +337,7 @@ module clk_divider(clock_out, rst, clk, clock_enable_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$80 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$176 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
     casez (\$5 )
@@ -360,176 +360,176 @@ endmodule
 (* \amaranth.hierarchy  = "PCM2PDM.ds" *)
 (* generator = "Amaranth" *)
 module ds(signal_in, signal_out, rst, clk, strobe_in);
-  reg \$auto$verilog_backend.cc:2082:dump_module$81  = 0;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:62" *)
+  reg \$auto$verilog_backend.cc:2082:dump_module$177  = 0;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:62" *)
   wire [18:0] \$1 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:68" *)
   wire [18:0] \$10 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:68" *)
   wire [18:0] \$11 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *)
   wire [55:0] \$13 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *)
   wire [18:0] \$14 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *)
   wire [53:0] \$16 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *)
   wire [53:0] \$18 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:62" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:62" *)
   wire [18:0] \$2 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *)
   wire [54:0] \$20 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *)
   wire [53:0] \$22 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *)
   wire [53:0] \$24 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *)
   wire [55:0] \$26 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *)
   wire [55:0] \$28 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *)
   wire [18:0] \$29 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *)
   wire [53:0] \$31 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *)
   wire [53:0] \$33 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *)
   wire [54:0] \$35 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *)
   wire [53:0] \$37 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *)
   wire [53:0] \$39 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:65" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:66" *)
   wire [18:0] \$4 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *)
   wire [55:0] \$41 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:78" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:80" *)
   wire [53:0] \$43 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:78" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:80" *)
   wire [53:0] \$44 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:78" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:80" *)
   wire [53:0] \$46 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:81" *)
   wire [54:0] \$48 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:81" *)
   wire [53:0] \$49 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:65" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:66" *)
   wire [18:0] \$5 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:81" *)
   wire [53:0] \$51 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:81" *)
   wire [54:0] \$53 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:80" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:82" *)
   wire [54:0] \$55 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:80" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:82" *)
   wire [53:0] \$56 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:80" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:82" *)
   wire [53:0] \$58 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:80" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:82" *)
   wire [54:0] \$60 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" *)
   wire [18:0] \$62 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" *)
   wire \$64 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" *)
   wire [18:0] \$66 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" *)
   wire \$68 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:66" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:67" *)
   wire [18:0] \$7 ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:66" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:67" *)
   wire [18:0] \$8 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input clk;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:59" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:59" *)
   reg [17:0] dac;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:48" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:48" *)
   reg [17:0] dx0 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:48" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:48" *)
   reg [17:0] \dx0$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:48" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:48" *)
   reg [17:0] dx2 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:48" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:48" *)
   reg [17:0] \dx2$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:48" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:48" *)
   reg [17:0] dx4 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:48" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:48" *)
   reg [17:0] \dx4$next ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input rst;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:55" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:55" *)
   wire [17:0] s;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:22" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:22" *)
   input [17:0] signal_in;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:23" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:23" *)
   output signal_out;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:24" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:24" *)
   input strobe_in;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:57" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:57" *)
   reg [17:0] v;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:46" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:46" *)
   reg [17:0] x0 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:46" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:46" *)
   reg [17:0] \x0$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:46" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:46" *)
   reg [17:0] x1 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:46" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:46" *)
   reg [17:0] \x1$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:46" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:46" *)
   reg [17:0] x2 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:46" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:46" *)
   reg [17:0] \x2$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:46" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:46" *)
   reg [17:0] x3 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:46" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:46" *)
   reg [17:0] \x3$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:46" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:46" *)
   reg [17:0] x4 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:46" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:46" *)
   reg [17:0] \x4$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:50" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:50" *)
   reg [17:0] xd0 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:50" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:50" *)
   reg [17:0] \xd0$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:50" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:50" *)
   reg [17:0] xd1 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:50" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:50" *)
   reg [17:0] \xd1$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:50" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:50" *)
   reg [17:0] xd2 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:50" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:50" *)
   reg [17:0] \xd2$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:50" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:50" *)
   reg [17:0] xd3 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:50" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:50" *)
   reg [17:0] \xd3$next ;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:50" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:50" *)
   reg [17:0] xd4 = 18'h00000;
-  (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:50" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:50" *)
   reg [17:0] \xd4$next ;
-  assign \$11  = $signed(xd4) + (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:67" *) $signed(dx4);
-  assign \$14  = $signed(xd1) + (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *) $signed(x0);
-  assign \$16  = $signed(s) * (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *) $signed(36'h000000468);
-  assign \$20  = $signed(\$14 ) + (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *) $signed(\$18 );
-  assign \$22  = $signed(36'h000000145) * (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *) $signed(x2);
-  assign \$26  = $signed(\$20 ) - (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:70" *) $signed(\$24 );
-  assign \$2  = $signed(signal_in) - (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:62" *) $signed(dac);
-  assign \$29  = $signed(xd3) + (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *) $signed(x2);
-  assign \$31  = $signed(s) * (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *) $signed(36'h00000b5f2);
-  assign \$35  = $signed(\$29 ) + (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *) $signed(\$33 );
-  assign \$37  = $signed(36'h000000399) * (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *) $signed(x4);
-  assign \$41  = $signed(\$35 ) - (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:71" *) $signed(\$39 );
-  assign \$44  = $signed(s) * (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:78" *) $signed(36'h000000049);
-  assign \$49  = $signed(s) * (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:79" *) $signed(36'h000002269);
-  assign \$53  = $signed(x1) + (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:79" *) $signed(\$51 );
-  assign \$56  = $signed(s) * (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:80" *) $signed(36'h00001f6cb);
-  assign \$5  = $signed(xd0) + (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:65" *) $signed(dx0);
-  assign \$60  = $signed(x3) + (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:80" *) $signed(\$58 );
-  assign \$62  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" *) $signed(x4);
-  assign \$64  = $signed(\$62 ) >= (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" *) $signed(19'h00000);
-  assign \$66  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" *) $signed(x4);
-  assign \$68  = $signed(\$66 ) >= (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" *) $signed(19'h00000);
-  assign \$8  = $signed(xd2) + (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:66" *) $signed(dx2);
+  assign \$11  = $signed(xd4) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:68" *) $signed(dx4);
+  assign \$14  = $signed(xd1) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *) $signed(x0);
+  assign \$16  = $signed(s) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *) $signed(36'h000000468);
+  assign \$20  = $signed(\$14 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *) $signed(\$18 );
+  assign \$22  = $signed(36'h000000145) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *) $signed(x2);
+  assign \$26  = $signed(\$20 ) - (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:72" *) $signed(\$24 );
+  assign \$2  = $signed(signal_in) - (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:62" *) $signed(dac);
+  assign \$29  = $signed(xd3) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *) $signed(x2);
+  assign \$31  = $signed(s) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *) $signed(36'h00000b5f2);
+  assign \$35  = $signed(\$29 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *) $signed(\$33 );
+  assign \$37  = $signed(36'h000000399) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *) $signed(x4);
+  assign \$41  = $signed(\$35 ) - (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:73" *) $signed(\$39 );
+  assign \$44  = $signed(s) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:80" *) $signed(36'h000000049);
+  assign \$49  = $signed(s) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:81" *) $signed(36'h000002269);
+  assign \$53  = $signed(x1) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:81" *) $signed(\$51 );
+  assign \$56  = $signed(s) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:82" *) $signed(36'h00001f6cb);
+  assign \$5  = $signed(xd0) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:66" *) $signed(dx0);
+  assign \$60  = $signed(x3) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:82" *) $signed(\$58 );
+  assign \$62  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" *) $signed(x4);
+  assign \$64  = $signed(\$62 ) >= (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" *) $signed(19'h00000);
+  assign \$66  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" *) $signed(x4);
+  assign \$68  = $signed(\$66 ) >= (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" *) $signed(19'h00000);
+  assign \$8  = $signed(xd2) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:67" *) $signed(dx2);
   always @(posedge clk)
     xd4 <= \xd4$next ;
   always @(posedge clk)
@@ -557,11 +557,11 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
   always @(posedge clk)
     dx0 <= \dx0$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \xd3$next  = xd3;
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" *)
     casez (strobe_in)
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" */
       1'h1:
           \xd3$next  = x3;
     endcase
@@ -572,11 +572,11 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \xd4$next  = xd4;
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" *)
     casez (strobe_in)
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" */
       1'h1:
           \xd4$next  = x4;
     endcase
@@ -587,11 +587,11 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \dx0$next  = dx0;
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" *)
     casez (strobe_in)
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" */
       1'h1:
           \dx0$next  = \$46 [17:0];
     endcase
@@ -602,11 +602,11 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \dx2$next  = dx2;
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" *)
     casez (strobe_in)
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" */
       1'h1:
           \dx2$next  = \$53 [17:0];
     endcase
@@ -617,11 +617,11 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \dx4$next  = dx4;
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" *)
     casez (strobe_in)
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" */
       1'h1:
           \dx4$next  = \$60 [17:0];
     endcase
@@ -632,33 +632,33 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" *)
     casez (\$64 )
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" */
       1'h1:
           dac = 18'h0ffff;
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:86" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:88" */
       default:
           dac = 18'h30001;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" *)
     casez (\$68 )
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:83" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:85" */
       1'h1:
           v = 18'h00001;
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:86" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:88" */
       default:
           v = 18'h00000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \x0$next  = \$5 [17:0];
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
@@ -667,7 +667,7 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \x2$next  = \$8 [17:0];
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
@@ -676,7 +676,7 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \x4$next  = \$11 [17:0];
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
@@ -685,7 +685,7 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \x1$next  = \$26 [17:0];
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
@@ -694,7 +694,7 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \x3$next  = \$41 [17:0];
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
@@ -703,11 +703,11 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \xd0$next  = xd0;
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" *)
     casez (strobe_in)
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" */
       1'h1:
           \xd0$next  = x0;
     endcase
@@ -718,11 +718,11 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \xd1$next  = xd1;
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" *)
     casez (strobe_in)
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" */
       1'h1:
           \xd1$next  = x1;
     endcase
@@ -733,11 +733,11 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$81 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$177 ) begin end
     \xd2$next  = xd2;
-    (* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" *)
     casez (strobe_in)
-      /* src = "/home/kkojima/pcm2pdm/pcm2pdm/dsord5.py:74" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsord5.py:76" */
       1'h1:
           \xd2$next  = x2;
     endcase
@@ -758,107 +758,489 @@ module ds(signal_in, signal_out, rst, clk, strobe_in);
   assign \$55  = \$60 ;
   assign signal_out = v[0];
   assign s = \$2 [17:0];
-  assign \$58  = { \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53:18] };
   assign \$18  = { \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53], \$16 [53:18] };
   assign \$24  = { \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53], \$22 [53:18] };
   assign \$33  = { \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53], \$31 [53:18] };
   assign \$39  = { \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53], \$37 [53:18] };
   assign \$46  = { \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53], \$44 [53:18] };
   assign \$51  = { \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53], \$49 [53:18] };
+  assign \$58  = { \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53], \$56 [53:18] };
 endmodule
 
 (* \amaranth.hierarchy  = "PCM2PDM.fir" *)
 (* generator = "Amaranth" *)
 module fir(enable_in, signal_out, rst, clk, signal_in);
-  reg \$auto$verilog_backend.cc:2082:dump_module$82  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$178  = 0;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
   wire \$1 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$10 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$100 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$101 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$102 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$103 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$104 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$105 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$106 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$107 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$108 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$109 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$11 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$110 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$111 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$112 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$113 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
-  wire [36:0] \$114 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$114 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$115 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$116 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$117 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
-  wire [36:0] \$119 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$118 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$119 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$12 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
-  wire \$121 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:26" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$120 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$121 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$122 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$123 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$124 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$125 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$126 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$127 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$128 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$129 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$13 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$130 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$131 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$132 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$133 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$134 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$135 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$136 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$137 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$138 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$139 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$14 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$140 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$141 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$142 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$143 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$144 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$145 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$146 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$147 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$148 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$149 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$15 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$150 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$151 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$152 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$153 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$154 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$155 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
+  wire \$156 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$158 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$159 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$16 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$160 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$161 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$162 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$163 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$164 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$165 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$166 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$167 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$168 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$169 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$17 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$170 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$171 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$172 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$173 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$174 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$175 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$176 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$177 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$178 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$179 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$18 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$180 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$181 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$182 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$183 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$184 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$185 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$186 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$187 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$188 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$189 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$19 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$190 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$191 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$192 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$193 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$194 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$195 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$196 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$197 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$198 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$199 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$20 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$200 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$201 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$202 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$203 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$204 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$205 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$206 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$207 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$208 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$209 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$21 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$210 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$211 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$212 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$213 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$214 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$215 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$216 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$217 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$218 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$219 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$22 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$220 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$221 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$222 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$223 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$224 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$225 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$226 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$227 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$228 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$229 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$23 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$230 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$231 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$232 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$233 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$234 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$235 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$236 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$237 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$238 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$239 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$24 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$240 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$241 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$242 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$243 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$244 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$245 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$246 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$247 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$248 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$249 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$25 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$250 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$251 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$252 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$253 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$254 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$255 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$256 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$257 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$258 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$259 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$26 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$260 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$261 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$262 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$263 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$264 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$265 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$266 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$267 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$268 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$269 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$27 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$270 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$271 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$272 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$273 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$274 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$275 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$276 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$277 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$278 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$279 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$28 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$280 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$281 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$282 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$283 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$284 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$285 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$286 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$287 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$288 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$289 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$29 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$290 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$291 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$292 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$293 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$294 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$295 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$296 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$297 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$298 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$299 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:110" *)
-  wire [6:0] \$3 ;
+  wire [8:0] \$3 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$30 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$300 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$301 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$302 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$303 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$304 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [35:0] \$305 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
+  wire [36:0] \$306 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
+  wire [35:0] \$307 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
+  wire [35:0] \$309 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$31 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
+  wire [36:0] \$311 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
+  wire \$313 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:26" *)
+  wire [35:0] \$315 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$32 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
@@ -876,7 +1258,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$39 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:110" *)
-  wire [6:0] \$4 ;
+  wire [8:0] \$4 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$40 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
@@ -919,87 +1301,89 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
   wire [35:0] \$59 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
   wire \$6 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
-  wire \$60 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$60 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [35:0] \$61 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$62 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$63 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$64 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$65 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$66 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$67 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$68 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$69 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$70 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$71 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$72 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$73 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$74 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$75 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$76 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$77 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$78 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$79 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$8 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$80 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$81 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$82 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$83 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$84 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$85 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$86 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$87 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$88 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$89 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$9 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$90 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$91 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$92 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$93 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$94 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$95 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$96 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$97 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$98 ;
-  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
   wire [35:0] \$99 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:88" *)
   reg [17:0] a = 18'h00000;
@@ -1018,9 +1402,9 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
   reg [1:0] \fsm_state$next ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:86" *)
-  reg [5:0] ix = 6'h00;
+  reg [7:0] ix = 8'h00;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:86" *)
-  reg [5:0] \ix$next ;
+  reg [7:0] \ix$next ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:87" *)
   reg [17:0] madd = 18'h00000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:87" *)
@@ -1047,21 +1431,209 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] \x10$next ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x100 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x100$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x101 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x101$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x102 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x102$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x103 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x103$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x104 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x104$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x105 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x105$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x106 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x106$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x107 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x107$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x108 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x108$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x109 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x109$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] x11 = 36'h000000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] \x11$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x110 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x110$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x111 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x111$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x112 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x112$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x113 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x113$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x114 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x114$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x115 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x115$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x116 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x116$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x117 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x117$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x118 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x118$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x119 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x119$next ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] x12 = 36'h000000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] \x12$next ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x120 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x120$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x121 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x121$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x122 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x122$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x123 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x123$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x124 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x124$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x125 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x125$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x126 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x126$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x127 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x127$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x128 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x128$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x129 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x129$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] x13 = 36'h000000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] \x13$next ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x130 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x130$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x131 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x131$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x132 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x132$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x133 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x133$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x134 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x134$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x135 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x135$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x136 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x136$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x137 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x137$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x138 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x138$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x139 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x139$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] x14 = 36'h000000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] \x14$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x140 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x140$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x141 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x141$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x142 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x142$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x143 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x143$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x144 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x144$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x145 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x145$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x146 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x146$next ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] x15 = 36'h000000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
@@ -1223,31 +1795,259 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] \x50$next ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x51 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x51$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x52 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x52$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x53 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x53$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x54 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x54$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x55 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x55$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x56 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x56$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x57 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x57$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x58 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x58$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x59 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x59$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] x6 = 36'h000000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] \x6$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x60 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x60$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x61 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x61$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x62 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x62$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x63 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x63$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x64 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x64$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x65 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x65$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x66 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x66$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x67 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x67$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x68 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x68$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x69 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x69$next ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] x7 = 36'h000000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] \x7$next ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x70 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x70$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x71 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x71$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x72 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x72$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x73 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x73$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x74 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x74$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x75 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x75$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x76 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x76$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x77 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x77$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x78 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x78$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x79 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x79$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] x8 = 36'h000000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] \x8$next ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x80 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x80$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x81 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x81$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x82 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x82$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x83 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x83$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x84 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x84$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x85 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x85$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x86 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x86$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x87 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x87$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x88 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x88$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x89 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x89$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] x9 = 36'h000000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [35:0] \x9$next ;
-  assign \$115  = $signed(a) * (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *) $signed(b);
-  assign \$119  = $signed(madd) + (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *) $signed(\$117 );
-  assign \$121  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 6'h33;
-  assign \$123  = + (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:26" *) $signed(signal_in);
-  assign \$1  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 6'h33;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x90 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x90$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x91 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x91$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x92 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x92$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x93 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x93$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x94 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x94$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x95 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x95$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x96 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x96$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x97 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x97$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x98 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x98$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] x99 = 36'h000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [35:0] \x99$next ;
+  assign \$156  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 8'h93;
+  assign \$1  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 8'h93;
+  assign \$307  = $signed(a) * (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *) $signed(b);
+  assign \$311  = $signed(madd) + (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *) $signed(\$309 );
+  assign \$313  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 8'h93;
+  assign \$315  = + (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:26" *) $signed(signal_in);
   assign \$4  = ix + (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:110" *) 1'h1;
-  assign \$60  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 6'h33;
-  assign \$6  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 6'h33;
+  assign \$6  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 8'h93;
   always @(posedge clk)
-    x0 <= \x0$next ;
+    x67 <= \x67$next ;
+  always @(posedge clk)
+    x66 <= \x66$next ;
+  always @(posedge clk)
+    x65 <= \x65$next ;
+  always @(posedge clk)
+    x64 <= \x64$next ;
+  always @(posedge clk)
+    x63 <= \x63$next ;
+  always @(posedge clk)
+    x62 <= \x62$next ;
+  always @(posedge clk)
+    x61 <= \x61$next ;
+  always @(posedge clk)
+    x60 <= \x60$next ;
+  always @(posedge clk)
+    x59 <= \x59$next ;
+  always @(posedge clk)
+    x58 <= \x58$next ;
+  always @(posedge clk)
+    x57 <= \x57$next ;
+  always @(posedge clk)
+    x56 <= \x56$next ;
+  always @(posedge clk)
+    x55 <= \x55$next ;
+  always @(posedge clk)
+    x54 <= \x54$next ;
+  always @(posedge clk)
+    x53 <= \x53$next ;
+  always @(posedge clk)
+    x52 <= \x52$next ;
+  always @(posedge clk)
+    x51 <= \x51$next ;
   always @(posedge clk)
     x50 <= \x50$next ;
   always @(posedge clk)
@@ -1360,8 +2160,168 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     a <= \a$next ;
   always @(posedge clk)
     ix <= \ix$next ;
+  always @(posedge clk)
+    x0 <= \x0$next ;
+  always @(posedge clk)
+    x146 <= \x146$next ;
+  always @(posedge clk)
+    x145 <= \x145$next ;
+  always @(posedge clk)
+    x144 <= \x144$next ;
+  always @(posedge clk)
+    x143 <= \x143$next ;
+  always @(posedge clk)
+    x142 <= \x142$next ;
+  always @(posedge clk)
+    x141 <= \x141$next ;
+  always @(posedge clk)
+    x140 <= \x140$next ;
+  always @(posedge clk)
+    x139 <= \x139$next ;
+  always @(posedge clk)
+    x138 <= \x138$next ;
+  always @(posedge clk)
+    x137 <= \x137$next ;
+  always @(posedge clk)
+    x136 <= \x136$next ;
+  always @(posedge clk)
+    x135 <= \x135$next ;
+  always @(posedge clk)
+    x134 <= \x134$next ;
+  always @(posedge clk)
+    x133 <= \x133$next ;
+  always @(posedge clk)
+    x132 <= \x132$next ;
+  always @(posedge clk)
+    x131 <= \x131$next ;
+  always @(posedge clk)
+    x130 <= \x130$next ;
+  always @(posedge clk)
+    x129 <= \x129$next ;
+  always @(posedge clk)
+    x128 <= \x128$next ;
+  always @(posedge clk)
+    x127 <= \x127$next ;
+  always @(posedge clk)
+    x126 <= \x126$next ;
+  always @(posedge clk)
+    x125 <= \x125$next ;
+  always @(posedge clk)
+    x124 <= \x124$next ;
+  always @(posedge clk)
+    x123 <= \x123$next ;
+  always @(posedge clk)
+    x122 <= \x122$next ;
+  always @(posedge clk)
+    x121 <= \x121$next ;
+  always @(posedge clk)
+    x120 <= \x120$next ;
+  always @(posedge clk)
+    x119 <= \x119$next ;
+  always @(posedge clk)
+    x118 <= \x118$next ;
+  always @(posedge clk)
+    x117 <= \x117$next ;
+  always @(posedge clk)
+    x116 <= \x116$next ;
+  always @(posedge clk)
+    x115 <= \x115$next ;
+  always @(posedge clk)
+    x114 <= \x114$next ;
+  always @(posedge clk)
+    x113 <= \x113$next ;
+  always @(posedge clk)
+    x112 <= \x112$next ;
+  always @(posedge clk)
+    x111 <= \x111$next ;
+  always @(posedge clk)
+    x110 <= \x110$next ;
+  always @(posedge clk)
+    x109 <= \x109$next ;
+  always @(posedge clk)
+    x108 <= \x108$next ;
+  always @(posedge clk)
+    x107 <= \x107$next ;
+  always @(posedge clk)
+    x106 <= \x106$next ;
+  always @(posedge clk)
+    x105 <= \x105$next ;
+  always @(posedge clk)
+    x104 <= \x104$next ;
+  always @(posedge clk)
+    x103 <= \x103$next ;
+  always @(posedge clk)
+    x102 <= \x102$next ;
+  always @(posedge clk)
+    x101 <= \x101$next ;
+  always @(posedge clk)
+    x100 <= \x100$next ;
+  always @(posedge clk)
+    x99 <= \x99$next ;
+  always @(posedge clk)
+    x98 <= \x98$next ;
+  always @(posedge clk)
+    x97 <= \x97$next ;
+  always @(posedge clk)
+    x96 <= \x96$next ;
+  always @(posedge clk)
+    x95 <= \x95$next ;
+  always @(posedge clk)
+    x94 <= \x94$next ;
+  always @(posedge clk)
+    x93 <= \x93$next ;
+  always @(posedge clk)
+    x92 <= \x92$next ;
+  always @(posedge clk)
+    x91 <= \x91$next ;
+  always @(posedge clk)
+    x90 <= \x90$next ;
+  always @(posedge clk)
+    x89 <= \x89$next ;
+  always @(posedge clk)
+    x88 <= \x88$next ;
+  always @(posedge clk)
+    x87 <= \x87$next ;
+  always @(posedge clk)
+    x86 <= \x86$next ;
+  always @(posedge clk)
+    x85 <= \x85$next ;
+  always @(posedge clk)
+    x84 <= \x84$next ;
+  always @(posedge clk)
+    x83 <= \x83$next ;
+  always @(posedge clk)
+    x82 <= \x82$next ;
+  always @(posedge clk)
+    x81 <= \x81$next ;
+  always @(posedge clk)
+    x80 <= \x80$next ;
+  always @(posedge clk)
+    x79 <= \x79$next ;
+  always @(posedge clk)
+    x78 <= \x78$next ;
+  always @(posedge clk)
+    x77 <= \x77$next ;
+  always @(posedge clk)
+    x76 <= \x76$next ;
+  always @(posedge clk)
+    x75 <= \x75$next ;
+  always @(posedge clk)
+    x74 <= \x74$next ;
+  always @(posedge clk)
+    x73 <= \x73$next ;
+  always @(posedge clk)
+    x72 <= \x72$next ;
+  always @(posedge clk)
+    x71 <= \x71$next ;
+  always @(posedge clk)
+    x70 <= \x70$next ;
+  always @(posedge clk)
+    x69 <= \x69$next ;
+  always @(posedge clk)
+    x68 <= \x68$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \ix$next  = ix;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -1372,7 +2332,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
           casez (enable_in)
             /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" */
             1'h1:
-                \ix$next  = 6'h01;
+                \ix$next  = 8'h01;
           endcase
       /* \amaranth.decoding  = "MAC/1" */
       /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:102" */
@@ -1385,17 +2345,17 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
                 /* empty */;
             /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:106" */
             default:
-                \ix$next  = \$4 [5:0];
+                \ix$next  = \$4 [7:0];
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
       1'h1:
-          \ix$next  = 6'h00;
+          \ix$next  = 8'h00;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \a$next  = a;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -1422,108 +2382,300 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
                 (* full_case = 32'd1 *)
                 (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
                 casez (ix)
-                  6'h00:
+                  8'h00:
                       \a$next  = x0[17:0];
-                  6'h01:
+                  8'h01:
                       \a$next  = x1[17:0];
-                  6'h02:
+                  8'h02:
                       \a$next  = x2[17:0];
-                  6'h03:
+                  8'h03:
                       \a$next  = x3[17:0];
-                  6'h04:
+                  8'h04:
                       \a$next  = x4[17:0];
-                  6'h05:
+                  8'h05:
                       \a$next  = x5[17:0];
-                  6'h06:
+                  8'h06:
                       \a$next  = x6[17:0];
-                  6'h07:
+                  8'h07:
                       \a$next  = x7[17:0];
-                  6'h08:
+                  8'h08:
                       \a$next  = x8[17:0];
-                  6'h09:
+                  8'h09:
                       \a$next  = x9[17:0];
-                  6'h0a:
+                  8'h0a:
                       \a$next  = x10[17:0];
-                  6'h0b:
+                  8'h0b:
                       \a$next  = x11[17:0];
-                  6'h0c:
+                  8'h0c:
                       \a$next  = x12[17:0];
-                  6'h0d:
+                  8'h0d:
                       \a$next  = x13[17:0];
-                  6'h0e:
+                  8'h0e:
                       \a$next  = x14[17:0];
-                  6'h0f:
+                  8'h0f:
                       \a$next  = x15[17:0];
-                  6'h10:
+                  8'h10:
                       \a$next  = x16[17:0];
-                  6'h11:
+                  8'h11:
                       \a$next  = x17[17:0];
-                  6'h12:
+                  8'h12:
                       \a$next  = x18[17:0];
-                  6'h13:
+                  8'h13:
                       \a$next  = x19[17:0];
-                  6'h14:
+                  8'h14:
                       \a$next  = x20[17:0];
-                  6'h15:
+                  8'h15:
                       \a$next  = x21[17:0];
-                  6'h16:
+                  8'h16:
                       \a$next  = x22[17:0];
-                  6'h17:
+                  8'h17:
                       \a$next  = x23[17:0];
-                  6'h18:
+                  8'h18:
                       \a$next  = x24[17:0];
-                  6'h19:
+                  8'h19:
                       \a$next  = x25[17:0];
-                  6'h1a:
+                  8'h1a:
                       \a$next  = x26[17:0];
-                  6'h1b:
+                  8'h1b:
                       \a$next  = x27[17:0];
-                  6'h1c:
+                  8'h1c:
                       \a$next  = x28[17:0];
-                  6'h1d:
+                  8'h1d:
                       \a$next  = x29[17:0];
-                  6'h1e:
+                  8'h1e:
                       \a$next  = x30[17:0];
-                  6'h1f:
+                  8'h1f:
                       \a$next  = x31[17:0];
-                  6'h20:
+                  8'h20:
                       \a$next  = x32[17:0];
-                  6'h21:
+                  8'h21:
                       \a$next  = x33[17:0];
-                  6'h22:
+                  8'h22:
                       \a$next  = x34[17:0];
-                  6'h23:
+                  8'h23:
                       \a$next  = x35[17:0];
-                  6'h24:
+                  8'h24:
                       \a$next  = x36[17:0];
-                  6'h25:
+                  8'h25:
                       \a$next  = x37[17:0];
-                  6'h26:
+                  8'h26:
                       \a$next  = x38[17:0];
-                  6'h27:
+                  8'h27:
                       \a$next  = x39[17:0];
-                  6'h28:
+                  8'h28:
                       \a$next  = x40[17:0];
-                  6'h29:
+                  8'h29:
                       \a$next  = x41[17:0];
-                  6'h2a:
+                  8'h2a:
                       \a$next  = x42[17:0];
-                  6'h2b:
+                  8'h2b:
                       \a$next  = x43[17:0];
-                  6'h2c:
+                  8'h2c:
                       \a$next  = x44[17:0];
-                  6'h2d:
+                  8'h2d:
                       \a$next  = x45[17:0];
-                  6'h2e:
+                  8'h2e:
                       \a$next  = x46[17:0];
-                  6'h2f:
+                  8'h2f:
                       \a$next  = x47[17:0];
-                  6'h30:
+                  8'h30:
                       \a$next  = x48[17:0];
-                  6'h31:
+                  8'h31:
                       \a$next  = x49[17:0];
-                  6'h??:
+                  8'h32:
                       \a$next  = x50[17:0];
+                  8'h33:
+                      \a$next  = x51[17:0];
+                  8'h34:
+                      \a$next  = x52[17:0];
+                  8'h35:
+                      \a$next  = x53[17:0];
+                  8'h36:
+                      \a$next  = x54[17:0];
+                  8'h37:
+                      \a$next  = x55[17:0];
+                  8'h38:
+                      \a$next  = x56[17:0];
+                  8'h39:
+                      \a$next  = x57[17:0];
+                  8'h3a:
+                      \a$next  = x58[17:0];
+                  8'h3b:
+                      \a$next  = x59[17:0];
+                  8'h3c:
+                      \a$next  = x60[17:0];
+                  8'h3d:
+                      \a$next  = x61[17:0];
+                  8'h3e:
+                      \a$next  = x62[17:0];
+                  8'h3f:
+                      \a$next  = x63[17:0];
+                  8'h40:
+                      \a$next  = x64[17:0];
+                  8'h41:
+                      \a$next  = x65[17:0];
+                  8'h42:
+                      \a$next  = x66[17:0];
+                  8'h43:
+                      \a$next  = x67[17:0];
+                  8'h44:
+                      \a$next  = x68[17:0];
+                  8'h45:
+                      \a$next  = x69[17:0];
+                  8'h46:
+                      \a$next  = x70[17:0];
+                  8'h47:
+                      \a$next  = x71[17:0];
+                  8'h48:
+                      \a$next  = x72[17:0];
+                  8'h49:
+                      \a$next  = x73[17:0];
+                  8'h4a:
+                      \a$next  = x74[17:0];
+                  8'h4b:
+                      \a$next  = x75[17:0];
+                  8'h4c:
+                      \a$next  = x76[17:0];
+                  8'h4d:
+                      \a$next  = x77[17:0];
+                  8'h4e:
+                      \a$next  = x78[17:0];
+                  8'h4f:
+                      \a$next  = x79[17:0];
+                  8'h50:
+                      \a$next  = x80[17:0];
+                  8'h51:
+                      \a$next  = x81[17:0];
+                  8'h52:
+                      \a$next  = x82[17:0];
+                  8'h53:
+                      \a$next  = x83[17:0];
+                  8'h54:
+                      \a$next  = x84[17:0];
+                  8'h55:
+                      \a$next  = x85[17:0];
+                  8'h56:
+                      \a$next  = x86[17:0];
+                  8'h57:
+                      \a$next  = x87[17:0];
+                  8'h58:
+                      \a$next  = x88[17:0];
+                  8'h59:
+                      \a$next  = x89[17:0];
+                  8'h5a:
+                      \a$next  = x90[17:0];
+                  8'h5b:
+                      \a$next  = x91[17:0];
+                  8'h5c:
+                      \a$next  = x92[17:0];
+                  8'h5d:
+                      \a$next  = x93[17:0];
+                  8'h5e:
+                      \a$next  = x94[17:0];
+                  8'h5f:
+                      \a$next  = x95[17:0];
+                  8'h60:
+                      \a$next  = x96[17:0];
+                  8'h61:
+                      \a$next  = x97[17:0];
+                  8'h62:
+                      \a$next  = x98[17:0];
+                  8'h63:
+                      \a$next  = x99[17:0];
+                  8'h64:
+                      \a$next  = x100[17:0];
+                  8'h65:
+                      \a$next  = x101[17:0];
+                  8'h66:
+                      \a$next  = x102[17:0];
+                  8'h67:
+                      \a$next  = x103[17:0];
+                  8'h68:
+                      \a$next  = x104[17:0];
+                  8'h69:
+                      \a$next  = x105[17:0];
+                  8'h6a:
+                      \a$next  = x106[17:0];
+                  8'h6b:
+                      \a$next  = x107[17:0];
+                  8'h6c:
+                      \a$next  = x108[17:0];
+                  8'h6d:
+                      \a$next  = x109[17:0];
+                  8'h6e:
+                      \a$next  = x110[17:0];
+                  8'h6f:
+                      \a$next  = x111[17:0];
+                  8'h70:
+                      \a$next  = x112[17:0];
+                  8'h71:
+                      \a$next  = x113[17:0];
+                  8'h72:
+                      \a$next  = x114[17:0];
+                  8'h73:
+                      \a$next  = x115[17:0];
+                  8'h74:
+                      \a$next  = x116[17:0];
+                  8'h75:
+                      \a$next  = x117[17:0];
+                  8'h76:
+                      \a$next  = x118[17:0];
+                  8'h77:
+                      \a$next  = x119[17:0];
+                  8'h78:
+                      \a$next  = x120[17:0];
+                  8'h79:
+                      \a$next  = x121[17:0];
+                  8'h7a:
+                      \a$next  = x122[17:0];
+                  8'h7b:
+                      \a$next  = x123[17:0];
+                  8'h7c:
+                      \a$next  = x124[17:0];
+                  8'h7d:
+                      \a$next  = x125[17:0];
+                  8'h7e:
+                      \a$next  = x126[17:0];
+                  8'h7f:
+                      \a$next  = x127[17:0];
+                  8'h80:
+                      \a$next  = x128[17:0];
+                  8'h81:
+                      \a$next  = x129[17:0];
+                  8'h82:
+                      \a$next  = x130[17:0];
+                  8'h83:
+                      \a$next  = x131[17:0];
+                  8'h84:
+                      \a$next  = x132[17:0];
+                  8'h85:
+                      \a$next  = x133[17:0];
+                  8'h86:
+                      \a$next  = x134[17:0];
+                  8'h87:
+                      \a$next  = x135[17:0];
+                  8'h88:
+                      \a$next  = x136[17:0];
+                  8'h89:
+                      \a$next  = x137[17:0];
+                  8'h8a:
+                      \a$next  = x138[17:0];
+                  8'h8b:
+                      \a$next  = x139[17:0];
+                  8'h8c:
+                      \a$next  = x140[17:0];
+                  8'h8d:
+                      \a$next  = x141[17:0];
+                  8'h8e:
+                      \a$next  = x142[17:0];
+                  8'h8f:
+                      \a$next  = x143[17:0];
+                  8'h90:
+                      \a$next  = x144[17:0];
+                  8'h91:
+                      \a$next  = x145[17:0];
+                  8'h??:
+                      \a$next  = x146[17:0];
                 endcase
           endcase
     endcase
@@ -1534,7 +2686,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x5$next  = x5;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1549,7 +2701,157 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x95$next  = x95;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x95$next  = x94;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x95$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x96$next  = x96;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x96$next  = x95;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x96$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x97$next  = x97;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x97$next  = x96;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x97$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x98$next  = x98;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x98$next  = x97;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x98$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x99$next  = x99;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x99$next  = x98;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x99$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x100$next  = x100;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x100$next  = x99;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x100$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x101$next  = x101;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x101$next  = x100;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x101$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x102$next  = x102;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x102$next  = x101;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x102$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x103$next  = x103;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x103$next  = x102;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x103$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x104$next  = x104;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x104$next  = x103;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x104$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x6$next  = x6;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1564,7 +2866,157 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x105$next  = x105;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x105$next  = x104;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x105$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x106$next  = x106;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x106$next  = x105;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x106$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x107$next  = x107;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x107$next  = x106;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x107$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x108$next  = x108;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x108$next  = x107;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x108$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x109$next  = x109;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x109$next  = x108;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x109$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x110$next  = x110;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x110$next  = x109;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x110$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x111$next  = x111;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x111$next  = x110;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x111$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x112$next  = x112;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x112$next  = x111;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x112$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x113$next  = x113;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x113$next  = x112;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x113$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x114$next  = x114;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x114$next  = x113;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x114$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x7$next  = x7;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1579,7 +3031,157 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x115$next  = x115;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x115$next  = x114;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x115$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x116$next  = x116;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x116$next  = x115;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x116$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x117$next  = x117;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x117$next  = x116;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x117$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x118$next  = x118;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x118$next  = x117;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x118$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x119$next  = x119;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x119$next  = x118;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x119$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x120$next  = x120;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x120$next  = x119;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x120$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x121$next  = x121;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x121$next  = x120;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x121$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x122$next  = x122;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x122$next  = x121;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x122$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x123$next  = x123;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x123$next  = x122;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x123$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x124$next  = x124;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x124$next  = x123;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x124$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x8$next  = x8;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1594,7 +3196,157 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x125$next  = x125;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x125$next  = x124;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x125$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x126$next  = x126;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x126$next  = x125;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x126$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x127$next  = x127;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x127$next  = x126;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x127$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x128$next  = x128;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x128$next  = x127;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x128$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x129$next  = x129;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x129$next  = x128;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x129$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x130$next  = x130;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x130$next  = x129;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x130$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x131$next  = x131;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x131$next  = x130;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x131$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x132$next  = x132;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x132$next  = x131;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x132$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x133$next  = x133;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x133$next  = x132;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x133$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x134$next  = x134;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x134$next  = x133;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x134$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x9$next  = x9;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1609,7 +3361,157 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x135$next  = x135;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x135$next  = x134;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x135$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x136$next  = x136;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x136$next  = x135;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x136$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x137$next  = x137;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x137$next  = x136;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x137$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x138$next  = x138;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x138$next  = x137;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x138$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x139$next  = x139;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x139$next  = x138;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x139$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x140$next  = x140;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x140$next  = x139;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x140$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x141$next  = x141;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x141$next  = x140;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x141$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x142$next  = x142;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x142$next  = x141;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x142$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x143$next  = x143;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x143$next  = x142;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x143$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x144$next  = x144;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x144$next  = x143;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x144$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x10$next  = x10;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1624,7 +3526,52 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x145$next  = x145;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x145$next  = x144;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x145$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x146$next  = x146;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x146$next  = x145;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x146$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x0$next  = x0;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x0$next  = \$315 ;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x0$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x11$next  = x11;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1639,7 +3586,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x12$next  = x12;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1654,7 +3601,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x13$next  = x13;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1669,7 +3616,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x14$next  = x14;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1684,7 +3631,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \b$next  = b;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -1695,14 +3642,14 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
           casez (enable_in)
             /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" */
             1'h1:
-                \b$next  = 18'h000a4;
+                \b$next  = 18'h0000a;
           endcase
       /* \amaranth.decoding  = "MAC/1" */
       /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:102" */
       2'h1:
           (* full_case = 32'd1 *)
           (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
-          casez (\$60 )
+          casez (\$156 )
             /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" */
             1'h1:
                 /* empty */;
@@ -1711,108 +3658,300 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
                 (* full_case = 32'd1 *)
                 (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
                 casez (ix)
-                  6'h00:
-                      \b$next  = 18'h000a4;
-                  6'h01:
-                      \b$next  = 18'h000da;
-                  6'h02:
-                      \b$next  = 18'h00163;
-                  6'h03:
-                      \b$next  = 18'h0021b;
-                  6'h04:
-                      \b$next  = 18'h00309;
-                  6'h05:
-                      \b$next  = 18'h00436;
-                  6'h06:
-                      \b$next  = 18'h005a6;
-                  6'h07:
-                      \b$next  = 18'h0075f;
-                  6'h08:
-                      \b$next  = 18'h00962;
-                  6'h09:
-                      \b$next  = 18'h00bb0;
-                  6'h0a:
-                      \b$next  = 18'h00e47;
-                  6'h0b:
-                      \b$next  = 18'h01121;
-                  6'h0c:
-                      \b$next  = 18'h01436;
-                  6'h0d:
-                      \b$next  = 18'h0177b;
-                  6'h0e:
-                      \b$next  = 18'h01ae3;
-                  6'h0f:
-                      \b$next  = 18'h01e5c;
-                  6'h10:
-                      \b$next  = 18'h021d6;
-                  6'h11:
-                      \b$next  = 18'h0253d;
-                  6'h12:
-                      \b$next  = 18'h0287c;
-                  6'h13:
-                      \b$next  = 18'h02b7e;
-                  6'h14:
-                      \b$next  = 18'h02e31;
-                  6'h15:
-                      \b$next  = 18'h03083;
-                  6'h16:
-                      \b$next  = 18'h03262;
-                  6'h17:
-                      \b$next  = 18'h033c2;
-                  6'h18:
-                      \b$next  = 18'h0349a;
-                  6'h19:
-                      \b$next  = 18'h034e2;
-                  6'h1a:
-                      \b$next  = 18'h0349a;
-                  6'h1b:
-                      \b$next  = 18'h033c2;
-                  6'h1c:
-                      \b$next  = 18'h03262;
-                  6'h1d:
-                      \b$next  = 18'h03083;
-                  6'h1e:
-                      \b$next  = 18'h02e31;
-                  6'h1f:
-                      \b$next  = 18'h02b7e;
-                  6'h20:
-                      \b$next  = 18'h0287c;
-                  6'h21:
-                      \b$next  = 18'h0253d;
-                  6'h22:
-                      \b$next  = 18'h021d6;
-                  6'h23:
-                      \b$next  = 18'h01e5c;
-                  6'h24:
-                      \b$next  = 18'h01ae3;
-                  6'h25:
-                      \b$next  = 18'h0177b;
-                  6'h26:
-                      \b$next  = 18'h01436;
-                  6'h27:
-                      \b$next  = 18'h01121;
-                  6'h28:
-                      \b$next  = 18'h00e47;
-                  6'h29:
-                      \b$next  = 18'h00bb0;
-                  6'h2a:
-                      \b$next  = 18'h00962;
-                  6'h2b:
-                      \b$next  = 18'h0075f;
-                  6'h2c:
-                      \b$next  = 18'h005a6;
-                  6'h2d:
-                      \b$next  = 18'h00436;
-                  6'h2e:
-                      \b$next  = 18'h00309;
-                  6'h2f:
-                      \b$next  = 18'h0021b;
-                  6'h30:
-                      \b$next  = 18'h00163;
-                  6'h31:
-                      \b$next  = 18'h000da;
-                  6'h??:
-                      \b$next  = 18'h000a4;
+                  8'h00:
+                      \b$next  = 18'h0000a;
+                  8'h01:
+                      \b$next  = 18'h0000d;
+                  8'h02:
+                      \b$next  = 18'h00014;
+                  8'h03:
+                      \b$next  = 18'h0001d;
+                  8'h04:
+                      \b$next  = 18'h00027;
+                  8'h05:
+                      \b$next  = 18'h00031;
+                  8'h06:
+                      \b$next  = 18'h0003b;
+                  8'h07:
+                      \b$next  = 18'h00044;
+                  8'h08:
+                      \b$next  = 18'h0004a;
+                  8'h09:
+                      \b$next  = 18'h0004b;
+                  8'h0a:
+                      \b$next  = 18'h00045;
+                  8'h0b:
+                      \b$next  = 18'h00037;
+                  8'h0c:
+                      \b$next  = 18'h0001e;
+                  8'h0d:
+                      \b$next  = 18'h3fffa;
+                  8'h0e:
+                      \b$next  = 18'h3ffc7;
+                  8'h0f:
+                      \b$next  = 18'h3ff85;
+                  8'h10:
+                      \b$next  = 18'h3ff34;
+                  8'h11:
+                      \b$next  = 18'h3fed6;
+                  8'h12:
+                      \b$next  = 18'h3fe6c;
+                  8'h13:
+                      \b$next  = 18'h3fdfa;
+                  8'h14:
+                      \b$next  = 18'h3fd82;
+                  8'h15:
+                      \b$next  = 18'h3fd0c;
+                  8'h16:
+                      \b$next  = 18'h3fc9c;
+                  8'h17:
+                      \b$next  = 18'h3fc3b;
+                  8'h18:
+                      \b$next  = 18'h3fbef;
+                  8'h19:
+                      \b$next  = 18'h3fbbf;
+                  8'h1a:
+                      \b$next  = 18'h3fbb3;
+                  8'h1b:
+                      \b$next  = 18'h3fbd1;
+                  8'h1c:
+                      \b$next  = 18'h3fc1c;
+                  8'h1d:
+                      \b$next  = 18'h3fc98;
+                  8'h1e:
+                      \b$next  = 18'h3fd43;
+                  8'h1f:
+                      \b$next  = 18'h3fe1d;
+                  8'h20:
+                      \b$next  = 18'h3ff1e;
+                  8'h21:
+                      \b$next  = 18'h0003e;
+                  8'h22:
+                      \b$next  = 18'h00172;
+                  8'h23:
+                      \b$next  = 18'h002ac;
+                  8'h24:
+                      \b$next  = 18'h003db;
+                  8'h25:
+                      \b$next  = 18'h004ee;
+                  8'h26:
+                      \b$next  = 18'h005d2;
+                  8'h27:
+                      \b$next  = 18'h00676;
+                  8'h28:
+                      \b$next  = 18'h006ca;
+                  8'h29:
+                      \b$next  = 18'h006bf;
+                  8'h2a:
+                      \b$next  = 18'h0064d;
+                  8'h2b:
+                      \b$next  = 18'h0056f;
+                  8'h2c:
+                      \b$next  = 18'h00425;
+                  8'h2d:
+                      \b$next  = 18'h00276;
+                  8'h2e:
+                      \b$next  = 18'h0006f;
+                  8'h2f:
+                      \b$next  = 18'h3fe26;
+                  8'h30:
+                      \b$next  = 18'h3fbb2;
+                  8'h31:
+                      \b$next  = 18'h3f933;
+                  8'h32:
+                      \b$next  = 18'h3f6ce;
+                  8'h33:
+                      \b$next  = 18'h3f4a8;
+                  8'h34:
+                      \b$next  = 18'h3f2ea;
+                  8'h35:
+                      \b$next  = 18'h3f1ba;
+                  8'h36:
+                      \b$next  = 18'h3f13f;
+                  8'h37:
+                      \b$next  = 18'h3f196;
+                  8'h38:
+                      \b$next  = 18'h3f2db;
+                  8'h39:
+                      \b$next  = 18'h3f51e;
+                  8'h3a:
+                      \b$next  = 18'h3f867;
+                  8'h3b:
+                      \b$next  = 18'h3fcb4;
+                  8'h3c:
+                      \b$next  = 18'h001f7;
+                  8'h3d:
+                      \b$next  = 18'h00817;
+                  8'h3e:
+                      \b$next  = 18'h00ef2;
+                  8'h3f:
+                      \b$next  = 18'h01659;
+                  8'h40:
+                      \b$next  = 18'h01e19;
+                  8'h41:
+                      \b$next  = 18'h025f4;
+                  8'h42:
+                      \b$next  = 18'h02dad;
+                  8'h43:
+                      \b$next  = 18'h03502;
+                  8'h44:
+                      \b$next  = 18'h03bb6;
+                  8'h45:
+                      \b$next  = 18'h0418c;
+                  8'h46:
+                      \b$next  = 18'h04652;
+                  8'h47:
+                      \b$next  = 18'h049db;
+                  8'h48:
+                      \b$next  = 18'h04c07;
+                  8'h49:
+                      \b$next  = 18'h04cc3;
+                  8'h4a:
+                      \b$next  = 18'h04c07;
+                  8'h4b:
+                      \b$next  = 18'h049db;
+                  8'h4c:
+                      \b$next  = 18'h04652;
+                  8'h4d:
+                      \b$next  = 18'h0418c;
+                  8'h4e:
+                      \b$next  = 18'h03bb6;
+                  8'h4f:
+                      \b$next  = 18'h03502;
+                  8'h50:
+                      \b$next  = 18'h02dad;
+                  8'h51:
+                      \b$next  = 18'h025f4;
+                  8'h52:
+                      \b$next  = 18'h01e19;
+                  8'h53:
+                      \b$next  = 18'h01659;
+                  8'h54:
+                      \b$next  = 18'h00ef2;
+                  8'h55:
+                      \b$next  = 18'h00817;
+                  8'h56:
+                      \b$next  = 18'h001f7;
+                  8'h57:
+                      \b$next  = 18'h3fcb4;
+                  8'h58:
+                      \b$next  = 18'h3f867;
+                  8'h59:
+                      \b$next  = 18'h3f51e;
+                  8'h5a:
+                      \b$next  = 18'h3f2db;
+                  8'h5b:
+                      \b$next  = 18'h3f196;
+                  8'h5c:
+                      \b$next  = 18'h3f13f;
+                  8'h5d:
+                      \b$next  = 18'h3f1ba;
+                  8'h5e:
+                      \b$next  = 18'h3f2ea;
+                  8'h5f:
+                      \b$next  = 18'h3f4a8;
+                  8'h60:
+                      \b$next  = 18'h3f6ce;
+                  8'h61:
+                      \b$next  = 18'h3f933;
+                  8'h62:
+                      \b$next  = 18'h3fbb2;
+                  8'h63:
+                      \b$next  = 18'h3fe26;
+                  8'h64:
+                      \b$next  = 18'h0006f;
+                  8'h65:
+                      \b$next  = 18'h00276;
+                  8'h66:
+                      \b$next  = 18'h00425;
+                  8'h67:
+                      \b$next  = 18'h0056f;
+                  8'h68:
+                      \b$next  = 18'h0064d;
+                  8'h69:
+                      \b$next  = 18'h006bf;
+                  8'h6a:
+                      \b$next  = 18'h006ca;
+                  8'h6b:
+                      \b$next  = 18'h00676;
+                  8'h6c:
+                      \b$next  = 18'h005d2;
+                  8'h6d:
+                      \b$next  = 18'h004ee;
+                  8'h6e:
+                      \b$next  = 18'h003db;
+                  8'h6f:
+                      \b$next  = 18'h002ac;
+                  8'h70:
+                      \b$next  = 18'h00172;
+                  8'h71:
+                      \b$next  = 18'h0003e;
+                  8'h72:
+                      \b$next  = 18'h3ff1e;
+                  8'h73:
+                      \b$next  = 18'h3fe1d;
+                  8'h74:
+                      \b$next  = 18'h3fd43;
+                  8'h75:
+                      \b$next  = 18'h3fc98;
+                  8'h76:
+                      \b$next  = 18'h3fc1c;
+                  8'h77:
+                      \b$next  = 18'h3fbd1;
+                  8'h78:
+                      \b$next  = 18'h3fbb3;
+                  8'h79:
+                      \b$next  = 18'h3fbbf;
+                  8'h7a:
+                      \b$next  = 18'h3fbef;
+                  8'h7b:
+                      \b$next  = 18'h3fc3b;
+                  8'h7c:
+                      \b$next  = 18'h3fc9c;
+                  8'h7d:
+                      \b$next  = 18'h3fd0c;
+                  8'h7e:
+                      \b$next  = 18'h3fd82;
+                  8'h7f:
+                      \b$next  = 18'h3fdfa;
+                  8'h80:
+                      \b$next  = 18'h3fe6c;
+                  8'h81:
+                      \b$next  = 18'h3fed6;
+                  8'h82:
+                      \b$next  = 18'h3ff34;
+                  8'h83:
+                      \b$next  = 18'h3ff85;
+                  8'h84:
+                      \b$next  = 18'h3ffc7;
+                  8'h85:
+                      \b$next  = 18'h3fffa;
+                  8'h86:
+                      \b$next  = 18'h0001e;
+                  8'h87:
+                      \b$next  = 18'h00037;
+                  8'h88:
+                      \b$next  = 18'h00045;
+                  8'h89:
+                      \b$next  = 18'h0004b;
+                  8'h8a:
+                      \b$next  = 18'h0004a;
+                  8'h8b:
+                      \b$next  = 18'h00044;
+                  8'h8c:
+                      \b$next  = 18'h0003b;
+                  8'h8d:
+                      \b$next  = 18'h00031;
+                  8'h8e:
+                      \b$next  = 18'h00027;
+                  8'h8f:
+                      \b$next  = 18'h0001d;
+                  8'h90:
+                      \b$next  = 18'h00014;
+                  8'h91:
+                      \b$next  = 18'h0000d;
+                  8'h??:
+                      \b$next  = 18'h0000a;
                 endcase
           endcase
     endcase
@@ -1823,7 +3962,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x15$next  = x15;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1838,7 +3977,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x16$next  = x16;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1853,7 +3992,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x17$next  = x17;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1868,7 +4007,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x18$next  = x18;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1883,7 +4022,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x19$next  = x19;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1898,7 +4037,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x20$next  = x20;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1913,7 +4052,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x21$next  = x21;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1928,7 +4067,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x22$next  = x22;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1943,7 +4082,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x23$next  = x23;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1958,7 +4097,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x24$next  = x24;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -1973,7 +4112,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \madd$next  = madd;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -1989,7 +4128,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
       /* \amaranth.decoding  = "MAC/1" */
       /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:102" */
       2'h1:
-          \madd$next  = \$119 [17:0];
+          \madd$next  = \$311 [17:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
@@ -1998,7 +4137,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x25$next  = x25;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2013,7 +4152,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x26$next  = x26;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2028,7 +4167,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x27$next  = x27;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2043,7 +4182,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x28$next  = x28;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2058,7 +4197,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x29$next  = x29;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2073,7 +4212,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x30$next  = x30;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2088,7 +4227,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x31$next  = x31;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2103,7 +4242,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x32$next  = x32;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2118,7 +4257,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x33$next  = x33;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2133,7 +4272,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x34$next  = x34;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2148,7 +4287,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -2165,7 +4304,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
       /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:102" */
       2'h1:
           (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
-          casez (\$121 )
+          casez (\$313 )
             /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" */
             1'h1:
                 \fsm_state$next  = 2'h2;
@@ -2182,7 +4321,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x35$next  = x35;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2197,7 +4336,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x36$next  = x36;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2212,7 +4351,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x37$next  = x37;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2227,7 +4366,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x38$next  = x38;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2242,7 +4381,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x39$next  = x39;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2257,7 +4396,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x40$next  = x40;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2272,7 +4411,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x41$next  = x41;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2287,7 +4426,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x42$next  = x42;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2302,7 +4441,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x43$next  = x43;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2317,7 +4456,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x44$next  = x44;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2332,7 +4471,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \signal_out$next  = signal_out;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -2356,7 +4495,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x45$next  = x45;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2371,7 +4510,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x46$next  = x46;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2386,7 +4525,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x47$next  = x47;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2401,7 +4540,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x48$next  = x48;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2416,7 +4555,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x49$next  = x49;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2431,7 +4570,7 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x50$next  = x50;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2446,22 +4585,67 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
-    \x0$next  = x0;
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x51$next  = x51;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
       /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
       1'h1:
-          \x0$next  = \$123 ;
+          \x51$next  = x50;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
       1'h1:
-          \x0$next  = 36'h000000000;
+          \x51$next  = 36'h000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x52$next  = x52;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x52$next  = x51;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x52$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x53$next  = x53;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x53$next  = x52;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x53$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x54$next  = x54;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x54$next  = x53;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x54$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x1$next  = x1;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2476,7 +4660,157 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x55$next  = x55;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x55$next  = x54;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x55$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x56$next  = x56;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x56$next  = x55;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x56$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x57$next  = x57;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x57$next  = x56;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x57$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x58$next  = x58;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x58$next  = x57;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x58$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x59$next  = x59;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x59$next  = x58;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x59$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x60$next  = x60;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x60$next  = x59;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x60$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x61$next  = x61;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x61$next  = x60;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x61$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x62$next  = x62;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x62$next  = x61;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x62$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x63$next  = x63;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x63$next  = x62;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x63$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x64$next  = x64;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x64$next  = x63;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x64$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x2$next  = x2;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2491,7 +4825,157 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x65$next  = x65;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x65$next  = x64;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x65$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x66$next  = x66;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x66$next  = x65;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x66$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x67$next  = x67;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x67$next  = x66;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x67$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x68$next  = x68;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x68$next  = x67;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x68$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x69$next  = x69;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x69$next  = x68;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x69$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x70$next  = x70;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x70$next  = x69;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x70$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x71$next  = x71;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x71$next  = x70;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x71$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x72$next  = x72;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x72$next  = x71;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x72$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x73$next  = x73;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x73$next  = x72;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x73$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x74$next  = x74;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x74$next  = x73;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x74$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x3$next  = x3;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2506,7 +4990,157 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$82 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x75$next  = x75;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x75$next  = x74;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x75$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x76$next  = x76;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x76$next  = x75;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x76$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x77$next  = x77;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x77$next  = x76;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x77$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x78$next  = x78;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x78$next  = x77;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x78$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x79$next  = x79;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x79$next  = x78;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x79$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x80$next  = x80;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x80$next  = x79;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x80$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x81$next  = x81;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x81$next  = x80;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x81$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x82$next  = x82;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x82$next  = x81;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x82$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x83$next  = x83;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x83$next  = x82;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x83$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x84$next  = x84;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x84$next  = x83;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x84$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
     \x4$next  = x4;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -2518,6 +5152,156 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
     casez (rst)
       1'h1:
           \x4$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x85$next  = x85;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x85$next  = x84;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x85$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x86$next  = x86;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x86$next  = x85;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x86$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x87$next  = x87;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x87$next  = x86;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x87$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x88$next  = x88;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x88$next  = x87;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x88$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x89$next  = x89;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x89$next  = x88;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x89$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x90$next  = x90;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x90$next  = x89;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x90$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x91$next  = x91;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x91$next  = x90;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x91$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x92$next  = x92;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x92$next  = x91;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x92$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x93$next  = x93;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x93$next  = x92;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x93$next  = 36'h000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$178 ) begin end
+    \x94$next  = x94;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x94$next  = x93;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x94$next  = 36'h000000000;
     endcase
   end
   assign \$3  = \$4 ;
@@ -2572,58 +5356,250 @@ module fir(enable_in, signal_out, rst, clk, signal_in);
   assign \$57  = x48;
   assign \$58  = x49;
   assign \$59  = x50;
-  assign \$63  = 36'h0000000a4;
-  assign \$64  = 36'h0000000da;
-  assign \$65  = 36'h000000163;
-  assign \$66  = 36'h00000021b;
-  assign \$67  = 36'h000000309;
-  assign \$68  = 36'h000000436;
-  assign \$69  = 36'h0000005a6;
-  assign \$70  = 36'h00000075f;
-  assign \$71  = 36'h000000962;
-  assign \$72  = 36'h000000bb0;
-  assign \$73  = 36'h000000e47;
-  assign \$74  = 36'h000001121;
-  assign \$75  = 36'h000001436;
-  assign \$76  = 36'h00000177b;
-  assign \$77  = 36'h000001ae3;
-  assign \$78  = 36'h000001e5c;
-  assign \$79  = 36'h0000021d6;
-  assign \$80  = 36'h00000253d;
-  assign \$81  = 36'h00000287c;
-  assign \$82  = 36'h000002b7e;
-  assign \$83  = 36'h000002e31;
-  assign \$84  = 36'h000003083;
-  assign \$85  = 36'h000003262;
-  assign \$86  = 36'h0000033c2;
-  assign \$87  = 36'h00000349a;
-  assign \$88  = 36'h0000034e2;
-  assign \$89  = 36'h00000349a;
-  assign \$90  = 36'h0000033c2;
-  assign \$91  = 36'h000003262;
-  assign \$92  = 36'h000003083;
-  assign \$93  = 36'h000002e31;
-  assign \$94  = 36'h000002b7e;
-  assign \$95  = 36'h00000287c;
-  assign \$96  = 36'h00000253d;
-  assign \$97  = 36'h0000021d6;
-  assign \$98  = 36'h000001e5c;
-  assign \$99  = 36'h000001ae3;
-  assign \$100  = 36'h00000177b;
-  assign \$101  = 36'h000001436;
-  assign \$102  = 36'h000001121;
-  assign \$103  = 36'h000000e47;
-  assign \$104  = 36'h000000bb0;
-  assign \$105  = 36'h000000962;
-  assign \$106  = 36'h00000075f;
-  assign \$107  = 36'h0000005a6;
-  assign \$108  = 36'h000000436;
-  assign \$109  = 36'h000000309;
-  assign \$110  = 36'h00000021b;
-  assign \$111  = 36'h000000163;
-  assign \$112  = 36'h0000000da;
-  assign \$113  = 36'h0000000a4;
-  assign \$114  = \$119 ;
-  assign \$117  = { \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35], \$115 [35:18] };
+  assign \$60  = x51;
+  assign \$61  = x52;
+  assign \$62  = x53;
+  assign \$63  = x54;
+  assign \$64  = x55;
+  assign \$65  = x56;
+  assign \$66  = x57;
+  assign \$67  = x58;
+  assign \$68  = x59;
+  assign \$69  = x60;
+  assign \$70  = x61;
+  assign \$71  = x62;
+  assign \$72  = x63;
+  assign \$73  = x64;
+  assign \$74  = x65;
+  assign \$75  = x66;
+  assign \$76  = x67;
+  assign \$77  = x68;
+  assign \$78  = x69;
+  assign \$79  = x70;
+  assign \$80  = x71;
+  assign \$81  = x72;
+  assign \$82  = x73;
+  assign \$83  = x74;
+  assign \$84  = x75;
+  assign \$85  = x76;
+  assign \$86  = x77;
+  assign \$87  = x78;
+  assign \$88  = x79;
+  assign \$89  = x80;
+  assign \$90  = x81;
+  assign \$91  = x82;
+  assign \$92  = x83;
+  assign \$93  = x84;
+  assign \$94  = x85;
+  assign \$95  = x86;
+  assign \$96  = x87;
+  assign \$97  = x88;
+  assign \$98  = x89;
+  assign \$99  = x90;
+  assign \$100  = x91;
+  assign \$101  = x92;
+  assign \$102  = x93;
+  assign \$103  = x94;
+  assign \$104  = x95;
+  assign \$105  = x96;
+  assign \$106  = x97;
+  assign \$107  = x98;
+  assign \$108  = x99;
+  assign \$109  = x100;
+  assign \$110  = x101;
+  assign \$111  = x102;
+  assign \$112  = x103;
+  assign \$113  = x104;
+  assign \$114  = x105;
+  assign \$115  = x106;
+  assign \$116  = x107;
+  assign \$117  = x108;
+  assign \$118  = x109;
+  assign \$119  = x110;
+  assign \$120  = x111;
+  assign \$121  = x112;
+  assign \$122  = x113;
+  assign \$123  = x114;
+  assign \$124  = x115;
+  assign \$125  = x116;
+  assign \$126  = x117;
+  assign \$127  = x118;
+  assign \$128  = x119;
+  assign \$129  = x120;
+  assign \$130  = x121;
+  assign \$131  = x122;
+  assign \$132  = x123;
+  assign \$133  = x124;
+  assign \$134  = x125;
+  assign \$135  = x126;
+  assign \$136  = x127;
+  assign \$137  = x128;
+  assign \$138  = x129;
+  assign \$139  = x130;
+  assign \$140  = x131;
+  assign \$141  = x132;
+  assign \$142  = x133;
+  assign \$143  = x134;
+  assign \$144  = x135;
+  assign \$145  = x136;
+  assign \$146  = x137;
+  assign \$147  = x138;
+  assign \$148  = x139;
+  assign \$149  = x140;
+  assign \$150  = x141;
+  assign \$151  = x142;
+  assign \$152  = x143;
+  assign \$153  = x144;
+  assign \$154  = x145;
+  assign \$155  = x146;
+  assign \$159  = 36'h00000000a;
+  assign \$160  = 36'h00000000d;
+  assign \$161  = 36'h000000014;
+  assign \$162  = 36'h00000001d;
+  assign \$163  = 36'h000000027;
+  assign \$164  = 36'h000000031;
+  assign \$165  = 36'h00000003b;
+  assign \$166  = 36'h000000044;
+  assign \$167  = 36'h00000004a;
+  assign \$168  = 36'h00000004b;
+  assign \$169  = 36'h000000045;
+  assign \$170  = 36'h000000037;
+  assign \$171  = 36'h00000001e;
+  assign \$172  = 36'hffffffffa;
+  assign \$173  = 36'hfffffffc7;
+  assign \$174  = 36'hfffffff85;
+  assign \$175  = 36'hfffffff34;
+  assign \$176  = 36'hffffffed6;
+  assign \$177  = 36'hffffffe6c;
+  assign \$178  = 36'hffffffdfa;
+  assign \$179  = 36'hffffffd82;
+  assign \$180  = 36'hffffffd0c;
+  assign \$181  = 36'hffffffc9c;
+  assign \$182  = 36'hffffffc3b;
+  assign \$183  = 36'hffffffbef;
+  assign \$184  = 36'hffffffbbf;
+  assign \$185  = 36'hffffffbb3;
+  assign \$186  = 36'hffffffbd1;
+  assign \$187  = 36'hffffffc1c;
+  assign \$188  = 36'hffffffc98;
+  assign \$189  = 36'hffffffd43;
+  assign \$190  = 36'hffffffe1d;
+  assign \$191  = 36'hfffffff1e;
+  assign \$192  = 36'h00000003e;
+  assign \$193  = 36'h000000172;
+  assign \$194  = 36'h0000002ac;
+  assign \$195  = 36'h0000003db;
+  assign \$196  = 36'h0000004ee;
+  assign \$197  = 36'h0000005d2;
+  assign \$198  = 36'h000000676;
+  assign \$199  = 36'h0000006ca;
+  assign \$200  = 36'h0000006bf;
+  assign \$201  = 36'h00000064d;
+  assign \$202  = 36'h00000056f;
+  assign \$203  = 36'h000000425;
+  assign \$204  = 36'h000000276;
+  assign \$205  = 36'h00000006f;
+  assign \$206  = 36'hffffffe26;
+  assign \$207  = 36'hffffffbb2;
+  assign \$208  = 36'hffffff933;
+  assign \$209  = 36'hffffff6ce;
+  assign \$210  = 36'hffffff4a8;
+  assign \$211  = 36'hffffff2ea;
+  assign \$212  = 36'hffffff1ba;
+  assign \$213  = 36'hffffff13f;
+  assign \$214  = 36'hffffff196;
+  assign \$215  = 36'hffffff2db;
+  assign \$216  = 36'hffffff51e;
+  assign \$217  = 36'hffffff867;
+  assign \$218  = 36'hffffffcb4;
+  assign \$219  = 36'h0000001f7;
+  assign \$220  = 36'h000000817;
+  assign \$221  = 36'h000000ef2;
+  assign \$222  = 36'h000001659;
+  assign \$223  = 36'h000001e19;
+  assign \$224  = 36'h0000025f4;
+  assign \$225  = 36'h000002dad;
+  assign \$226  = 36'h000003502;
+  assign \$227  = 36'h000003bb6;
+  assign \$228  = 36'h00000418c;
+  assign \$229  = 36'h000004652;
+  assign \$230  = 36'h0000049db;
+  assign \$231  = 36'h000004c07;
+  assign \$232  = 36'h000004cc3;
+  assign \$233  = 36'h000004c07;
+  assign \$234  = 36'h0000049db;
+  assign \$235  = 36'h000004652;
+  assign \$236  = 36'h00000418c;
+  assign \$237  = 36'h000003bb6;
+  assign \$238  = 36'h000003502;
+  assign \$239  = 36'h000002dad;
+  assign \$240  = 36'h0000025f4;
+  assign \$241  = 36'h000001e19;
+  assign \$242  = 36'h000001659;
+  assign \$243  = 36'h000000ef2;
+  assign \$244  = 36'h000000817;
+  assign \$245  = 36'h0000001f7;
+  assign \$246  = 36'hffffffcb4;
+  assign \$247  = 36'hffffff867;
+  assign \$248  = 36'hffffff51e;
+  assign \$249  = 36'hffffff2db;
+  assign \$250  = 36'hffffff196;
+  assign \$251  = 36'hffffff13f;
+  assign \$252  = 36'hffffff1ba;
+  assign \$253  = 36'hffffff2ea;
+  assign \$254  = 36'hffffff4a8;
+  assign \$255  = 36'hffffff6ce;
+  assign \$256  = 36'hffffff933;
+  assign \$257  = 36'hffffffbb2;
+  assign \$258  = 36'hffffffe26;
+  assign \$259  = 36'h00000006f;
+  assign \$260  = 36'h000000276;
+  assign \$261  = 36'h000000425;
+  assign \$262  = 36'h00000056f;
+  assign \$263  = 36'h00000064d;
+  assign \$264  = 36'h0000006bf;
+  assign \$265  = 36'h0000006ca;
+  assign \$266  = 36'h000000676;
+  assign \$267  = 36'h0000005d2;
+  assign \$268  = 36'h0000004ee;
+  assign \$269  = 36'h0000003db;
+  assign \$270  = 36'h0000002ac;
+  assign \$271  = 36'h000000172;
+  assign \$272  = 36'h00000003e;
+  assign \$273  = 36'hfffffff1e;
+  assign \$274  = 36'hffffffe1d;
+  assign \$275  = 36'hffffffd43;
+  assign \$276  = 36'hffffffc98;
+  assign \$277  = 36'hffffffc1c;
+  assign \$278  = 36'hffffffbd1;
+  assign \$279  = 36'hffffffbb3;
+  assign \$280  = 36'hffffffbbf;
+  assign \$281  = 36'hffffffbef;
+  assign \$282  = 36'hffffffc3b;
+  assign \$283  = 36'hffffffc9c;
+  assign \$284  = 36'hffffffd0c;
+  assign \$285  = 36'hffffffd82;
+  assign \$286  = 36'hffffffdfa;
+  assign \$287  = 36'hffffffe6c;
+  assign \$288  = 36'hffffffed6;
+  assign \$289  = 36'hfffffff34;
+  assign \$290  = 36'hfffffff85;
+  assign \$291  = 36'hfffffffc7;
+  assign \$292  = 36'hffffffffa;
+  assign \$293  = 36'h00000001e;
+  assign \$294  = 36'h000000037;
+  assign \$295  = 36'h000000045;
+  assign \$296  = 36'h00000004b;
+  assign \$297  = 36'h00000004a;
+  assign \$298  = 36'h000000044;
+  assign \$299  = 36'h00000003b;
+  assign \$300  = 36'h000000031;
+  assign \$301  = 36'h000000027;
+  assign \$302  = 36'h00000001d;
+  assign \$303  = 36'h000000014;
+  assign \$304  = 36'h00000000d;
+  assign \$305  = 36'h00000000a;
+  assign \$306  = \$311 ;
+  assign \$309  = { \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35], \$307 [35:18] };
 endmodule
 

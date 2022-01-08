@@ -62,7 +62,7 @@ class PCM2PDM(Elaboratable):
                  fs: int=48000,
                  pre_upsample: int=4,
                  post_upsample: int=12,
-                 fir_order: int=51,
+                 fir_order: int=147,
                  fir_cutoff: list=[6000, 10000],
                  fir_weight: list=[0.05, 60],
                  ds_order1: bool= False):
