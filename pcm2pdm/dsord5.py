@@ -24,7 +24,7 @@ class FixedPointDeltaSigmaModulatorOrd5(Elaboratable):
         self.strobe_in = Signal()
 
         order = 5
-        Hinf = 1.4
+        Hinf = 1.5
         f0 = 0.
         ntf = synthesizeNTF(order, osr, 2, Hinf, f0)
         a, g, b, c = realizeNTF(ntf, 'CRFB')
@@ -32,7 +32,7 @@ class FixedPointDeltaSigmaModulatorOrd5(Elaboratable):
         self.bitwidth = bitwidth
         self.fraction_width = fraction_width
         self.b = [int(x * 2**fraction_width) for x in b]
-        self.g = [int(x * 2**fraction_width) for x in g]
+        self.g = [int(-x * 2**fraction_width) for x in g]
 
     def elaborate(self, platform) -> Module:
         m = Module()
@@ -58,29 +58,54 @@ class FixedPointDeltaSigmaModulatorOrd5(Elaboratable):
         # dac and s must be in [-2**bw/4, 2**bw/4] to avoid integer overflow
         dac = Signal(signed(bw))
 
-        # assume a[i] = b[i] except for i = 5
-        m.d.comb += s.eq(u - dac)
-        m.d.comb += self.signal_out.eq(v)
-        # even: delayed integrator
-        m.d.sync += [
-            x[0].eq(xd[0] + dx[0]),
-            x[2].eq(xd[2] + dx[2]),
-            x[4].eq(xd[4] + dx[4])
-        ]
-        # odd: integrator with input and feedback
-        m.d.sync += [
-            x[1].eq(xd[1] + x[0] + ((s * b[1]) >> fbw) - ((g[0] * x[2]) >> fbw)),
-            x[3].eq(xd[3] + x[2] + ((s * b[3]) >> fbw) - ((g[1] * x[4]) >> fbw)),
-        ]
+        # weighted sum and feedback
+        ws = Array(Signal(signed(bw), name=f"ws{i}") for i in range(5))
+        fb = Array(Signal(signed(bw), name=f"fb{i}") for i in range(2))
 
-        with m.If(self.strobe_in):
-            for i in range(5):
-                m.d.sync += xd[i].eq(x[i])
-            m.d.sync += [
-                dx[0].eq((s * b[0]) >> fbw),
-                dx[2].eq(x[1] + ((s * b[2]) >> fbw)),
-                dx[4].eq(x[3] + ((s * b[4]) >> fbw))
-            ]
+        m.d.comb += self.signal_out.eq(v)
+
+        with m.FSM(reset="IDLE"):
+            with m.State("IDLE"):
+                with m.If(self.strobe_in):
+                    for i in range(5):
+                        m.d.sync += xd[i].eq(x[i])
+                    m.d.sync += [
+                        dx[0].eq(ws[0]),
+                        dx[2].eq(x[1] + ws[2]),
+                        dx[4].eq(x[3] + ws[4]),
+                    ]
+                    m.next = "EVEN"
+
+            with m.State("EVEN"):
+                # even: delayed integrator
+                m.d.sync += [
+                    x[0].eq(xd[0] + dx[0]),
+                    x[2].eq(xd[2] + dx[2]),
+                    x[4].eq(xd[4] + dx[4])
+                ]
+                m.next = "DACK"
+
+            with m.State("DACK"):
+                # assume a[i] = b[i] except for i = 5
+                m.d.sync += s.eq(u - dac)
+                m.next = "MULT"
+  
+            with m.State("MULT"):
+                for i in range(5):
+                    m.d.sync += ws[i].eq((b[i] * s) >> fbw)
+                m.d.sync += [
+                    fb[0].eq((g[0] * x[2]) >> fbw),
+                    fb[1].eq((g[1] * x[4]) >> fbw)
+                ]
+                m.next = "ODD"
+
+            with m.State("ODD"):
+                # odd: integrator with input and feedback
+                m.d.sync += [
+                    x[1].eq(xd[1] + x[0] + ws[1] + fb[0]),
+                    x[3].eq(xd[3] + x[2] + ws[3] + fb[1])
+                ]
+                m.next = "IDLE"
 
         with m.If(u + x[4] >= 0):
             m.d.comb += dac.eq(2**(bw-2)-1)
@@ -100,8 +125,8 @@ class FixedPointDeltaSigmaModulatorOrd5Test(GatewareTestCase):
         dut = self.dut
         N = 8192
         ftest = 0.1
-        # strobe_in period = 4 clk
-        u =[int(0.5*sin(2*pi*i/(4*N*ftest)) * (2**17-1)) for i in range(8192)]
+        # strobe_in period = 8 clk
+        u =[int(0.5*sin(2*pi*i/(8*N*ftest)) * (2**17-1)) for i in range(8192)]
 
         count = 0
         for i in range(N):
@@ -110,6 +135,10 @@ class FixedPointDeltaSigmaModulatorOrd5Test(GatewareTestCase):
             yield dut.strobe_in.eq(1)
             yield
             yield dut.strobe_in.eq(0)
+            yield
+            yield
+            yield
+            yield
             yield
             yield
             count = count + 1
