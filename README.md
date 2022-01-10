@@ -8,7 +8,16 @@ PCM2PDM provides a minimal PCM to PDM pipeline.
 
 The FIR lowpass filter in the pipeline is implemented with the Amaranth HDL as an [amlib](https://github.com/amaranth-community-unofficial/amlib) library. The default Delta-Sigma modulator is a 5-order CRFB modulator.
 
-examples/gsd_butterstick.py is a running example using LiteX on Greg Davill's ButterStick board. It consumes 8 multipliers when 18-bit width arithmetic is specified. One can reduce the number of required multipliers to 1 by selecting order 1 delta sigma modulator with ds_order1=True in the PCM2PDM constructor, though this will impact the filter characteristics.
+![FIR lowpass filter](https://github.com/kazkojima/pcm2pdm-example/blob/main/doc/fir-fig.png)
+
+![Delta Sigma Modulator: NTF and Spectrum](https://github.com/kazkojima/pcm2pdm-example/blob/main/doc/deltasigma-ord5-osr48.png)
+
+examples/gsd_butterstick.py is a running example using LiteX on Greg Davill's ButterStick board. It consumes 24 (resp. 8) multipliers when 24-bit (resp. 18-bit) width arithmetic is specified. One can reduce the number of required multipliers to 3 (resp. 1) by selecting order 1 delta sigma modulator with ds_order1=True in the PCM2PDM constructor, though this will impact the filter characteristics. There's also the issue of ideal tones in this order 1 modulator.
+
+The current implementation works at 64MHz on ButterStick:
+```
+Max frequency for sys_clk: 85.95 MHz (PASS at 64.51 MHz)
+```
 
 To make this example work, you need to add a few lines for the PDM output pins like
 ```
