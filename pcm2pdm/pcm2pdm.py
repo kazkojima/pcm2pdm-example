@@ -57,15 +57,15 @@ class PCM2PDM(Elaboratable):
         """
     def __init__(self,
                  divisor: int=28,
-                 bitwidth: int=18,
-                 fraction_width: int=18,
+                 bitwidth: int=24,
+                 fraction_width: int=24,
                  fs: int=48000,
                  pre_upsample: int=4,
                  post_upsample: int=12,
-                 fir_order: int=147,
-                 fir_cutoff: list=[6000, 10000],
+                 fir_order: int=179,
+                 fir_cutoff: list=[10000, 14000],
                  fir_weight: list=[0.05, 60],
-                 ds_order1: bool= False):
+                 ds_order1: bool=False):
         self.pdm_clock_out = Signal()
         self.pdm_data_out = Signal()
         self.pcm_strobe_in = Signal()
@@ -90,32 +90,13 @@ class PCM2PDM(Elaboratable):
         m.submodules.clk_divider = clk_divider
         m.d.comb += [
             clk_divider.clock_enable_in.eq(1),
-            self.pdm_clock_out.eq(clk_divider.clock_out)
+            self.pdm_clock_out.eq(~clk_divider.clock_out)
         ]
         strobe = Rose(clk_divider.clock_out, domain="sync")
 
         bw = self.bitwidth
         fbw = self.fraction_width
         osr = self.pre_upsample * self.post_upsample
-
-        fir = FixedPointFIRFilter(samplerate=self.fs * self.pre_upsample,
-                                  bitwidth=bw,
-                                  fraction_width=fbw,
-                                  cutoff_freq=self.fir_cutoff,
-                                  filter_order=self.fir_order,
-                                  weight=self.fir_weight,
-                                  mac_loop=True,
-                                  verbose=False)
-        m.submodules.fir = fir
-        if self.ds_order1:
-            deltasigma_func = FixedPointDeltaSigmaModulatorOrd1
-        else:
-            deltasigma_func = FixedPointDeltaSigmaModulatorOrd5
-        ds = deltasigma_func(bitwidth=bw,
-                             fraction_width=fbw,
-                             osr=osr,
-                             verbose=False)
-        m.submodules.ds = ds
 
         # Strobe pulses
         count1 = Signal(range(self.post_upsample))
@@ -143,18 +124,37 @@ class PCM2PDM(Elaboratable):
                 strobe1.eq(0),
                 strobe2.eq(0)
             ]
+
+        # filters
+        fir_fs = self.fs * self.pre_upsample
+        fir = FixedPointFIRFilter(samplerate=fir_fs,
+                                  bitwidth=bw,
+                                  fraction_width=fbw,
+                                  cutoff_freq=self.fir_cutoff,
+                                  filter_order=self.fir_order,
+                                  weight=self.fir_weight,
+                                  mac_loop=True,
+                                  verbose=False)
+        m.submodules.fir = fir
+
+        if self.ds_order1:
+            deltasigma_func = FixedPointDeltaSigmaModulatorOrd1
+        else:
+            deltasigma_func = FixedPointDeltaSigmaModulatorOrd5
+        ds = deltasigma_func(bitwidth=bw,
+                             fraction_width=fbw,
+                             osr=osr,
+                             verbose=False)
+        m.submodules.ds = ds
             
         with m.If(strobe2):
             m.d.comb += fir.signal_in.eq(self.pcm_data_in)
-        with m.Else():
-            m.d.comb += fir.signal_in.eq(0)
-        #m.d.comb += fir.signal_in.eq(self.pcm_data_in)
+        m.d.comb += ds.signal_in.eq(fir.signal_out * self.pre_upsample)
 
         m.d.comb += [
             self.pcm_strobe_in.eq(strobe2),
             fir.enable_in.eq(strobe1),
             ds.strobe_in.eq(strobe0),
-            ds.signal_in.eq(fir.signal_out * self.pre_upsample),
             self.pdm_data_out.eq(ds.signal_out)
         ]
 
@@ -162,7 +162,7 @@ class PCM2PDM(Elaboratable):
 
 class PCM2PDMTest(GatewareTestCase):
     FRAGMENT_UNDER_TEST = PCM2PDM
-    FRAGMENT_ARGUMENTS = dict(divisor=28)
+    FRAGMENT_ARGUMENTS = dict(divisor=28, bitwidth=18, fraction_width=18)
 
     @sync_test_case
     def test_pcm2pdm(self):
