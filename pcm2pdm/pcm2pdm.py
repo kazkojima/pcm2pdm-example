@@ -13,7 +13,7 @@ from amlib.utils import SimpleClockDivider
 from amlib.dsp import FixedPointFIRFilter
 
 from pcm2pdm.dsord1 import FixedPointDeltaSigmaModulatorOrd1
-from pcm2pdm.dsord5 import FixedPointDeltaSigmaModulatorOrd5
+from pcm2pdm.dsordn import FixedPointDeltaSigmaModulator
 
 import numpy as np
 from math import sin, pi
@@ -52,8 +52,8 @@ class PCM2PDM(Elaboratable):
             fir filter cutoff frequency or pass/stop start frequencies
         fir_weight: list
             fir filter ripple/attenuation when pass/stop list is specified
-        ds_order1: bool
-            use order 1 delta sigma modulator
+        ds_order: int
+            deltasigma modulator order
         """
     def __init__(self,
                  divisor: int=28,
@@ -65,7 +65,7 @@ class PCM2PDM(Elaboratable):
                  fir_order: int=179,
                  fir_cutoff: list=[10000, 14000],
                  fir_weight: list=[0.05, 60],
-                 ds_order1: bool=False):
+                 ds_order: int=5):
         self.pdm_clock_out = Signal()
         self.pdm_data_out = Signal()
         self.pcm_strobe_in = Signal()
@@ -81,7 +81,7 @@ class PCM2PDM(Elaboratable):
         self.fir_order = fir_order
         self.fir_cutoff = fir_cutoff
         self.fir_weight = fir_weight
-        self.ds_order1 = ds_order1
+        self.ds_order = ds_order
 
     def elaborate(self, platform) -> Module:
         m = Module()
@@ -137,14 +137,17 @@ class PCM2PDM(Elaboratable):
                                   verbose=False)
         m.submodules.fir = fir
 
-        if self.ds_order1:
-            deltasigma_func = FixedPointDeltaSigmaModulatorOrd1
+        if self.ds_order==1:
+            ds = FixedPointDeltaSigmaModulatorOrd1(bitwidth=bw,
+                                                   fraction_width=fbw,
+                                                   osr=osr,
+                                                   verbose=False)
         else:
-            deltasigma_func = FixedPointDeltaSigmaModulatorOrd5
-        ds = deltasigma_func(bitwidth=bw,
-                             fraction_width=fbw,
-                             osr=osr,
-                             verbose=False)
+            ds = FixedPointDeltaSigmaModulator(bitwidth=bw,
+                                               fraction_width=fbw,
+                                               order=self.ds_order,
+                                               osr=osr,
+                                               verbose=False)
         m.submodules.ds = ds
             
         with m.If(strobe2):

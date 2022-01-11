@@ -39,8 +39,8 @@ class PDMout(Module, AutoCSR):
         self.comb += [
             fifo.source.ready.eq(pcm_strobe_in),
             pcm_s16.eq(fifo.source.data),
-            # scale for 24-bit
-            self.pcm_data.eq(pcm_s16 * 2**6),
+            # scale for 24-bit without overflow
+            self.pcm_data.eq(pcm_s16 << 6),
             self.pcm_ready.eq(fifo.source.valid)
         ]
 

@@ -6,13 +6,14 @@ PCM2PDM provides a minimal PCM to PDM pipeline.
 
 ![Filter Pipeline](https://github.com/kazkojima/pcm2pdm-example/blob/main/doc/filter-pipeline.png)
 
-The FIR lowpass filter in the pipeline is implemented with the Amaranth HDL as an [amlib](https://github.com/amaranth-community-unofficial/amlib) library. The default Delta-Sigma modulator is a 5-order CRFB modulator.
+The FIR lowpass filter in the pipeline is implemented with the Amaranth HDL as an [amlib](https://github.com/amaranth-community-unofficial/amlib) library. The default Delta-Sigma modulator is a 5-order CRFB modulator. Only odd order modulator is supported.
 
 ![FIR lowpass filter](https://github.com/kazkojima/pcm2pdm-example/blob/main/doc/fir-fig.png)
 
 ![Delta Sigma Modulator: NTF and Spectrum](https://github.com/kazkojima/pcm2pdm-example/blob/main/doc/deltasigma-ord5-osr48.png)
 
-examples/gsd_butterstick.py is a running example using LiteX on Greg Davill's ButterStick board. It consumes 24 (resp. 8) multipliers when 24-bit (resp. 18-bit) width arithmetic is specified. One can reduce the number of required multipliers to 3 (resp. 1) by selecting order 1 delta sigma modulator with ds_order1=True in the PCM2PDM constructor, though this will impact the filter characteristics. There's also the issue of ideal tones in this order 1 modulator.
+examples/gsd_butterstick.py is a running example using LiteX on Greg Davill's ButterStick board. It consumes 24 (resp. 8) multipliers when 24-bit (resp. 18-bit) width arithmetic is specified for the default 5-order modulator. One can reduce the number of required multipliers to 3 (resp. 1) by selecting order 1 delta sigma modulator with ds_order=1 in the PCM2PDM constructor, though this will impact the filter characteristics. There's also the issue of ideal tones in this order 1 modulator.
+OTOH, higher order (> 5) delta-sigma modulators require higher precision calculations.
 
 The current implementation works at 64MHz on ButterStick:
 ```
@@ -103,3 +104,9 @@ popd
 -------------
 
 **TODO**
+
+[1] G. Venturini, [python-deltasigma](http://www.python-deltasigma.io) and its [github repo](https://github.com/ggventurini/python-deltasigma).
+
+See also its fork ['Add Python 3.9 & scipy 1.7.0 support'](https://github.com/Y-F-Acoustics/python-deltasigma) by Y. Fukuda.
+
+[2] Tom Verbeure, [PDM Microphones and Sigma-Delta A/D Conversion](https://tomverbeure.github.io/2020/10/04/PDM-Microphones-and-Sigma-Delta-Conversion.html)
