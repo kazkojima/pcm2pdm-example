@@ -147,6 +147,7 @@ class PCM2PDM(Elaboratable):
                                                fraction_width=fbw,
                                                order=self.ds_order,
                                                osr=osr,
+                                               mul_loop=True,
                                                verbose=False)
         m.submodules.ds = ds
             

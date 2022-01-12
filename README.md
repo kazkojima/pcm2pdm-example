@@ -12,7 +12,7 @@ The FIR lowpass filter in the pipeline is implemented with the Amaranth HDL as a
 
 ![Delta Sigma Modulator: NTF and Spectrum](https://github.com/kazkojima/pcm2pdm-example/blob/main/doc/deltasigma-ord5-osr48.png)
 
-examples/gsd_butterstick.py is a running example using LiteX on Greg Davill's ButterStick board. It consumes 24 (resp. 8) multipliers when 24-bit (resp. 18-bit) width arithmetic is specified for the default 5-order modulator. One can reduce the number of required multipliers to 3 (resp. 1) by selecting order 1 delta sigma modulator with ds_order=1 in the PCM2PDM constructor, though this will impact the filter characteristics. There's also the issue of ideal tones in this order 1 modulator.
+examples/gsd_butterstick.py is a running example using LiteX on Greg Davill's ButterStick board. It consumes 8 (resp. 2) multipliers when 24-bit (resp. 18-bit) width arithmetic is specified for the default 5-order modulator. One can reduce the number of required multipliers to 3 (resp. 1) by selecting order 1 delta sigma modulator with ds_order=1 in the PCM2PDM constructor, though this will impact the filter characteristics. There's also the issue of ideal tones in this order 1 modulator.
 OTOH, higher order (> 5) delta-sigma modulators require higher precision calculations.
 
 The current implementation works at 64MHz on ButterStick:

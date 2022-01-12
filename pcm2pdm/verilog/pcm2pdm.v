@@ -4,7 +4,7 @@
 (* top =  1  *)
 (* generator = "Amaranth" *)
 module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in);
-  reg \$auto$verilog_backend.cc:2082:dump_module$216  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$219  = 0;
   (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:93" *)
   wire \$1 ;
   (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:111" *)
@@ -37,9 +37,9 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
   wire \$33 ;
   (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:119" *)
   wire \$35 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:155" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:156" *)
   wire [26:0] \$37 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:155" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:156" *)
   wire [26:0] \$38 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
   wire \$5 ;
@@ -66,11 +66,11 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
   reg [5:0] count2 = 6'h00;
   (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:103" *)
   reg [5:0] \count2$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:26" *)
-  wire [23:0] ds_signal_in;
   (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:27" *)
-  wire ds_signal_out;
+  wire [23:0] ds_signal_in;
   (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:28" *)
+  wire ds_signal_out;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:29" *)
   wire ds_strobe_in;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:25" *)
   wire fir_enable_in;
@@ -114,7 +114,7 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
   assign \$31  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
   assign \$33  = \$31  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
   assign \$35  = ! (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:119" *) count2;
-  assign \$38  = $signed(fir_signal_out) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:155" *) $signed(24'h000004);
+  assign \$38  = $signed(fir_signal_out) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:156" *) $signed(24'h000004);
   assign \$3  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
   assign \$5  = \$3  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
   assign \$7  = ! (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:108" *) count1;
@@ -151,7 +151,7 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     .signal_out(fir_signal_out)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$216 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
     \count1$next  = count1;
     (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:107" *)
     casez (\$5 )
@@ -175,7 +175,7 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$216 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
     \count2$next  = count2;
     (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:107" *)
     casez (\$14 )
@@ -199,7 +199,7 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$216 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:107" *)
     casez (\$23 )
@@ -217,7 +217,7 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$216 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:107" *)
     casez (\$27 )
@@ -235,7 +235,7 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$216 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:107" *)
     casez (\$33 )
@@ -253,11 +253,11 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$216 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
     fir_signal_in = 24'h000000;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:153" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:154" *)
     casez (strobe2)
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:153" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:154" */
       1'h1:
           fir_signal_in = pcm_data_in;
     endcase
@@ -278,7 +278,7 @@ endmodule
 (* \amaranth.hierarchy  = "PCM2PDM.clk_divider" *)
 (* generator = "Amaranth" *)
 module clk_divider(clock_out, rst, clk, clock_enable_in);
-  reg \$auto$verilog_backend.cc:2082:dump_module$217  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$220  = 0;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
   wire \$1 ;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:22" *)
@@ -313,7 +313,7 @@ module clk_divider(clock_out, rst, clk, clock_enable_in);
   always @(posedge clk)
     clock_out <= \clock_out$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$217 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$220 ) begin end
     \clock_out$next  = clock_out;
     (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
     casez (\$1 )
@@ -337,7 +337,7 @@ module clk_divider(clock_out, rst, clk, clock_enable_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$217 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$220 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
     casez (\$5 )
@@ -360,234 +360,284 @@ endmodule
 (* \amaranth.hierarchy  = "PCM2PDM.ds" *)
 (* generator = "Amaranth" *)
 module ds(strobe_in, signal_out, rst, clk, signal_in);
-  reg \$auto$verilog_backend.cc:2082:dump_module$218  = 0;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:91" *)
-  wire [24:0] \$1 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+  reg \$auto$verilog_backend.cc:2082:dump_module$221  = 0;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:93" *)
+  wire [49:0] \$1 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *)
   wire [24:0] \$10 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
-  wire [24:0] \$11 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
-  wire [24:0] \$13 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
-  wire [24:0] \$14 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:102" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+  wire \$12 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+  wire \$14 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
   wire [24:0] \$16 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:102" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
   wire [24:0] \$17 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$19 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:91" *)
-  wire [24:0] \$2 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$20 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$22 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$24 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$25 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$27 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$29 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$30 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$32 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$34 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$35 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$37 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$39 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:91" *)
-  wire [24:0] \$4 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$40 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *)
-  wire [71:0] \$42 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:109" *)
-  wire [71:0] \$44 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:109" *)
-  wire [71:0] \$45 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:109" *)
-  wire [71:0] \$47 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:109" *)
-  wire [71:0] \$49 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:91" *)
-  wire [24:0] \$5 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:109" *)
-  wire [71:0] \$50 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:109" *)
-  wire [71:0] \$52 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
+  wire [24:0] \$19 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:93" *)
+  wire [49:0] \$2 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
+  wire [24:0] \$20 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
+  wire [24:0] \$22 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
+  wire [24:0] \$23 ;
   (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *)
-  wire [26:0] \$54 ;
+  wire [24:0] \$25 ;
   (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *)
-  wire [24:0] \$55 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *)
-  wire [25:0] \$57 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *)
-  wire [26:0] \$59 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *)
-  wire [26:0] \$61 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *)
-  wire [24:0] \$62 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *)
-  wire [25:0] \$64 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *)
-  wire [26:0] \$66 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" *)
-  wire [24:0] \$68 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+  wire [24:0] \$26 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+  wire \$28 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:141" *)
+  wire [3:0] \$30 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:141" *)
+  wire [3:0] \$31 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+  wire \$33 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:153" *)
+  wire [3:0] \$35 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:153" *)
+  wire [3:0] \$36 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+  wire \$38 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:93" *)
+  wire [49:0] \$4 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:139" *)
+  wire [3:0] \$40 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+  wire \$42 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:151" *)
+  wire [3:0] \$44 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  wire [24:0] \$46 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+  wire \$48 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:77" *)
+  wire [24:0] \$50 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  wire [24:0] \$52 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  wire [4:0] \$53 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  wire [5:0] \$55 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  wire [24:0] \$57 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  wire [24:0] \$59 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *)
+  wire [24:0] \$6 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  wire [24:0] \$61 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  wire [24:0] \$63 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  wire [24:0] \$65 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+  wire \$67 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+  wire \$69 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *)
   wire [24:0] \$7 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" *)
-  wire \$70 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  wire [26:0] \$71 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
   wire [24:0] \$72 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" *)
-  wire \$74 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
-  wire [24:0] \$8 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  wire [25:0] \$74 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  wire [26:0] \$76 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  wire [26:0] \$78 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  wire [24:0] \$79 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  wire [25:0] \$81 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  wire [26:0] \$83 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+  wire [24:0] \$85 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+  wire \$87 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+  wire [24:0] \$89 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *)
+  wire [24:0] \$9 ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+  wire \$91 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input clk;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:76" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:81" *)
   reg [23:0] dac;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:65" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
   reg [23:0] dx0 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:65" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
   reg [23:0] \dx0$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:65" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
   reg [23:0] dx2 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:65" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
   reg [23:0] \dx2$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:65" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
   reg [23:0] dx4 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:65" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
   reg [23:0] \dx4$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:80" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" *)
   reg [23:0] fb0 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:80" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" *)
   reg [23:0] \fb0$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:80" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" *)
   reg [23:0] fb1 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:80" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" *)
   reg [23:0] \fb1$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
   reg [2:0] fsm_state = 3'h0;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
   reg [2:0] \fsm_state$next ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:89" *)
+  reg [2:0] ix = 3'h0;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:89" *)
+  reg [2:0] \ix$next ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:90" *)
+  reg [24:0] ma = 25'h0000000;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:90" *)
+  reg [24:0] \ma$next ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:91" *)
+  reg [24:0] mb = 25'h0000000;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:91" *)
+  reg [24:0] \mb$next ;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:92" *)
+  wire [24:0] mz;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input rst;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:77" *)
   reg [23:0] s = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:77" *)
   reg [23:0] \s$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:26" *)
-  input [23:0] signal_in;
   (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:27" *)
-  output signal_out;
+  input [23:0] signal_in;
   (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:28" *)
+  output signal_out;
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:29" *)
   input strobe_in;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:74" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
   reg [23:0] v;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
   reg [23:0] ws0 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
   reg [23:0] \ws0$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
   reg [23:0] ws1 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
   reg [23:0] \ws1$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
   reg [23:0] ws2 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
   reg [23:0] \ws2$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
   reg [23:0] ws3 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
   reg [23:0] \ws3$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
   reg [23:0] ws4 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
   reg [23:0] \ws4$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:63" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
   reg [23:0] x0 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:63" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
   reg [23:0] \x0$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:63" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
   reg [23:0] x1 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:63" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
   reg [23:0] \x1$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:63" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
   reg [23:0] x2 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:63" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
   reg [23:0] \x2$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:63" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
   reg [23:0] x3 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:63" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
   reg [23:0] \x3$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:63" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
   reg [23:0] x4 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:63" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
   reg [23:0] \x4$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
   reg [23:0] xd0 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
   reg [23:0] \xd0$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
   reg [23:0] xd1 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
   reg [23:0] \xd1$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
   reg [23:0] xd2 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
   reg [23:0] \xd2$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
   reg [23:0] xd3 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
   reg [23:0] \xd3$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
   reg [23:0] xd4 = 24'h000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:67" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
   reg [23:0] \xd4$next ;
-  assign \$11  = $signed(xd2) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *) $signed(dx2);
-  assign \$14  = $signed(xd4) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *) $signed(dx4);
-  assign \$17  = $signed(signal_in) - (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:102" *) $signed(dac);
-  assign \$20  = $signed(48'h000000002b89) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *) $signed(s);
-  assign \$25  = $signed(48'h0000000236d6) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *) $signed(s);
-  assign \$2  = $signed(x1) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:91" *) $signed(ws2);
-  assign \$30  = $signed(48'h0000000e26fa) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *) $signed(s);
-  assign \$35  = $signed(48'h0000003fa89c) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *) $signed(s);
-  assign \$40  = $signed(48'h0000008e7e21) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" *) $signed(s);
-  assign \$45  = $signed(48'hffffffffae9d) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:109" *) $signed(x2);
-  assign \$50  = $signed(48'hffffffff198a) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:109" *) $signed(x4);
-  assign \$55  = $signed(xd1) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *) $signed(x0);
-  assign \$57  = $signed(\$55 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *) $signed(ws1);
-  assign \$5  = $signed(x3) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:91" *) $signed(ws4);
-  assign \$59  = $signed(\$57 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *) $signed(fb0);
-  assign \$62  = $signed(xd3) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *) $signed(x2);
-  assign \$64  = $signed(\$62 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *) $signed(ws3);
-  assign \$66  = $signed(\$64 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *) $signed(fb1);
-  assign \$68  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" *) $signed(x4);
-  assign \$70  = $signed(\$68 ) >= (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" *) $signed(25'h0000000);
-  assign \$72  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" *) $signed(x4);
-  assign \$74  = $signed(\$72 ) >= (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" *) $signed(25'h0000000);
-  assign \$8  = $signed(xd0) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *) $signed(dx0);
-  always @(posedge clk)
-    fb0 <= \fb0$next ;
-  always @(posedge clk)
-    ws4 <= \ws4$next ;
-  always @(posedge clk)
-    ws3 <= \ws3$next ;
-  always @(posedge clk)
-    ws2 <= \ws2$next ;
+  assign \$10  = $signed(x3) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *) $signed(ws4);
+  assign \$12  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *) 1'h1;
+  assign \$14  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *) 3'h4;
+  assign \$17  = $signed(xd0) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *) $signed(dx0);
+  assign \$20  = $signed(xd2) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *) $signed(dx2);
+  assign \$23  = $signed(xd4) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *) $signed(dx4);
+  assign \$26  = $signed(signal_in) - (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *) $signed(dac);
+  assign \$28  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *) 1'h1;
+  assign \$2  = $signed(ma) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:93" *) $signed(mb);
+  assign \$31  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:141" *) 1'h1;
+  assign \$33  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *) 3'h4;
+  assign \$36  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:153" *) 1'h1;
+  assign \$38  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *) 1'h1;
+  assign \$40  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:139" *) 1'h1;
+  assign \$42  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *) 3'h4;
+  assign \$44  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:151" *) 1'h1;
+  assign \$46  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *) $signed(x2);
+  assign \$48  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *) 1'h1;
+  assign \$50  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:77" *) $signed(s);
+  assign \$53  = 2'h2 * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) ix;
+  assign \$55  = \$53  + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) 3'h4;
+  assign \$57  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) $signed(x0);
+  assign \$59  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) $signed(x1);
+  assign \$61  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) $signed(x2);
+  assign \$63  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) $signed(x3);
+  assign \$65  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) $signed(x4);
+  assign \$67  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *) 1'h1;
+  assign \$69  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *) 3'h4;
+  assign \$72  = $signed(xd1) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(x0);
+  assign \$74  = $signed(\$72 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(ws1);
+  assign \$76  = $signed(\$74 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(fb0);
+  assign \$7  = $signed(x1) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *) $signed(ws2);
+  assign \$79  = $signed(xd3) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(x2);
+  assign \$81  = $signed(\$79 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(ws3);
+  assign \$83  = $signed(\$81 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(fb1);
+  assign \$85  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *) $signed(x4);
+  assign \$87  = $signed(\$85 ) >= (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *) $signed(25'h0000000);
+  assign \$89  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *) $signed(x4);
+  assign \$91  = $signed(\$89 ) >= (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *) $signed(25'h0000000);
   always @(posedge clk)
     ws1 <= \ws1$next ;
   always @(posedge clk)
-    ws0 <= \ws0$next ;
+    ws2 <= \ws2$next ;
+  always @(posedge clk)
+    ws3 <= \ws3$next ;
+  always @(posedge clk)
+    ws4 <= \ws4$next ;
+  always @(posedge clk)
+    fb0 <= \fb0$next ;
+  always @(posedge clk)
+    fb1 <= \fb1$next ;
+  always @(posedge clk)
+    mb <= \mb$next ;
+  always @(posedge clk)
+    ma <= \ma$next ;
+  always @(posedge clk)
+    ix <= \ix$next ;
   always @(posedge clk)
     s <= \s$next ;
   always @(posedge clk)
@@ -619,18 +669,380 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @(posedge clk)
     x1 <= \x1$next ;
   always @(posedge clk)
-    fb1 <= \fb1$next ;
+    ws0 <= \ws0$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    \xd0$next  = xd0;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \fsm_state$next  = fsm_state;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
+            1'h1:
+                \fsm_state$next  = 3'h1;
+          endcase
+      /* \amaranth.decoding  = "EVEN/1" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      3'h1:
+          \fsm_state$next  = 3'h2;
+      /* \amaranth.decoding  = "DACK/2" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      3'h2:
+          \fsm_state$next  = 3'h3;
+      /* \amaranth.decoding  = "MULT_FB/3" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      3'h3:
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+          casez (\$12 )
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" */
+            1'h1:
+                \fsm_state$next  = 3'h4;
+          endcase
+      /* \amaranth.decoding  = "MULT_WS/4" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      3'h4:
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+          casez (\$14 )
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" */
+            1'h1:
+                \fsm_state$next  = 3'h5;
+          endcase
+      /* \amaranth.decoding  = "ODD/5" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:164" */
+      3'h5:
+          \fsm_state$next  = 3'h0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \fsm_state$next  = 3'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \x0$next  = x0;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      3'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "EVEN/1" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      3'h1:
+          \x0$next  = \$17 [23:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x0$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \x2$next  = x2;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      3'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "EVEN/1" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      3'h1:
+          \x2$next  = \$20 [23:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x2$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \x4$next  = x4;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      3'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "EVEN/1" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      3'h1:
+          \x4$next  = \$23 [23:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x4$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \s$next  = s;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      3'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "EVEN/1" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      3'h1:
+          /* empty */;
+      /* \amaranth.decoding  = "DACK/2" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      3'h2:
+          \s$next  = \$26 [23:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \s$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \ix$next  = ix;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      3'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "EVEN/1" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      3'h1:
+          /* empty */;
+      /* \amaranth.decoding  = "DACK/2" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      3'h2:
+          \ix$next  = 3'h0;
+      /* \amaranth.decoding  = "MULT_FB/3" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      3'h3:
+          (* full_case = 32'd1 *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+          casez (\$28 )
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" */
+            1'h1:
+                \ix$next  = 3'h0;
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:136" */
+            default:
+                \ix$next  = \$31 [2:0];
+          endcase
+      /* \amaranth.decoding  = "MULT_WS/4" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      3'h4:
+          (* full_case = 32'd1 *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+          casez (\$33 )
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:148" */
+            default:
+                \ix$next  = \$36 [2:0];
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \ix$next  = 3'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \ma$next  = ma;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      3'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "EVEN/1" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      3'h1:
+          /* empty */;
+      /* \amaranth.decoding  = "DACK/2" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      3'h2:
+          \ma$next  = 25'h1ffae9d;
+      /* \amaranth.decoding  = "MULT_FB/3" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      3'h3:
+          (* full_case = 32'd1 *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+          casez (\$38 )
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" */
+            1'h1:
+                \ma$next  = 25'h0002b89;
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:136" */
+            default:
+                (* full_case = 32'd1 *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:139" *)
+                casez (\$40 )
+                  4'h0:
+                      \ma$next  = 25'h1ffae9d;
+                  4'h?:
+                      \ma$next  = 25'h1ff198a;
+                endcase
+          endcase
+      /* \amaranth.decoding  = "MULT_WS/4" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      3'h4:
+          (* full_case = 32'd1 *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+          casez (\$42 )
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:148" */
+            default:
+                (* full_case = 32'd1 *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:151" *)
+                casez (\$44 )
+                  4'h0:
+                      \ma$next  = 25'h0002b89;
+                  4'h1:
+                      \ma$next  = 25'h00236d6;
+                  4'h2:
+                      \ma$next  = 25'h00e26fa;
+                  4'h3:
+                      \ma$next  = 25'h03fa89c;
+                  4'h4:
+                      \ma$next  = 25'h08e7e21;
+                  4'h?:
+                      \ma$next  = 25'h1000000;
+                endcase
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \ma$next  = 25'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \mb$next  = mb;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      3'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "EVEN/1" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      3'h1:
+          /* empty */;
+      /* \amaranth.decoding  = "DACK/2" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      3'h2:
+          \mb$next  = \$46 ;
+      /* \amaranth.decoding  = "MULT_FB/3" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      3'h3:
+          (* full_case = 32'd1 *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+          casez (\$48 )
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" */
+            1'h1:
+                \mb$next  = \$50 ;
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:136" */
+            default:
+                (* full_case = 32'd1 *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+                casez (\$55 )
+                  6'h00:
+                      \mb$next  = \$57 ;
+                  6'h01:
+                      \mb$next  = \$59 ;
+                  6'h02:
+                      \mb$next  = \$61 ;
+                  6'h03:
+                      \mb$next  = \$63 ;
+                  6'h??:
+                      \mb$next  = \$65 ;
+                endcase
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \mb$next  = 25'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \fb0$next  = fb0;
+    \fb1$next  = fb1;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      3'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "EVEN/1" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      3'h1:
+          /* empty */;
+      /* \amaranth.decoding  = "DACK/2" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      3'h2:
+          /* empty */;
+      /* \amaranth.decoding  = "MULT_FB/3" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      3'h3:
+          (* full_case = 32'd1 *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+          casez (\$67 )
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" */
+            1'h1:
+                (* full_case = 32'd1 *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:130" *)
+                casez (ix)
+                  3'h0:
+                      \fb0$next  = mz[23:0];
+                  3'h?:
+                      \fb1$next  = mz[23:0];
+                endcase
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:136" */
+            default:
+                (* full_case = 32'd1 *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:138" *)
+                casez (ix)
+                  3'h0:
+                      \fb0$next  = mz[23:0];
+                  3'h?:
+                      \fb1$next  = mz[23:0];
+                endcase
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+        begin
+          \fb0$next  = 24'h000000;
+          \fb1$next  = 24'h000000;
+        end
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \xd0$next  = xd0;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      3'h0:
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
+          casez (strobe_in)
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
             1'h1:
                 \xd0$next  = x0;
           endcase
@@ -642,268 +1054,191 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    \x0$next  = x0;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          /* empty */;
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          \x0$next  = \$8 [23:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \x0$next  = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    \x2$next  = x2;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          /* empty */;
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          \x2$next  = \$11 [23:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \x2$next  = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    \x4$next  = x4;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          /* empty */;
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          \x4$next  = \$14 [23:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \x4$next  = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    \s$next  = s;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          /* empty */;
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          /* empty */;
-      /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:100" */
-      3'h2:
-          \s$next  = \$17 [23:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \s$next  = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
     \ws0$next  = ws0;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          /* empty */;
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          /* empty */;
-      /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:100" */
-      3'h2:
-          /* empty */;
-      /* \amaranth.decoding  = "MULT/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:105" */
-      3'h3:
-          \ws0$next  = \$22 [23:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \ws0$next  = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
     \ws1$next  = ws1;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          /* empty */;
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          /* empty */;
-      /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:100" */
-      3'h2:
-          /* empty */;
-      /* \amaranth.decoding  = "MULT/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:105" */
-      3'h3:
-          \ws1$next  = \$27 [23:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \ws1$next  = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
     \ws2$next  = ws2;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          /* empty */;
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          /* empty */;
-      /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:100" */
-      3'h2:
-          /* empty */;
-      /* \amaranth.decoding  = "MULT/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:105" */
-      3'h3:
-          \ws2$next  = \$32 [23:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \ws2$next  = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
     \ws3$next  = ws3;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          /* empty */;
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          /* empty */;
-      /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:100" */
-      3'h2:
-          /* empty */;
-      /* \amaranth.decoding  = "MULT/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:105" */
-      3'h3:
-          \ws3$next  = \$37 [23:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \ws3$next  = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
     \ws4$next  = ws4;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:100" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
       3'h2:
           /* empty */;
-      /* \amaranth.decoding  = "MULT/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:105" */
+      /* \amaranth.decoding  = "MULT_FB/3" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
       3'h3:
-          \ws4$next  = \$42 [23:0];
+          /* empty */;
+      /* \amaranth.decoding  = "MULT_WS/4" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      3'h4:
+          (* full_case = 32'd1 *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+          casez (\$69 )
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" */
+            1'h1:
+                (* full_case = 32'd1 *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:146" *)
+                casez (ix)
+                  3'h0:
+                      \ws0$next  = mz[23:0];
+                  3'h1:
+                      \ws1$next  = mz[23:0];
+                  3'h2:
+                      \ws2$next  = mz[23:0];
+                  3'h3:
+                      \ws3$next  = mz[23:0];
+                  3'h?:
+                      \ws4$next  = mz[23:0];
+                endcase
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:148" */
+            default:
+                (* full_case = 32'd1 *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:150" *)
+                casez (ix)
+                  3'h0:
+                      \ws0$next  = mz[23:0];
+                  3'h1:
+                      \ws1$next  = mz[23:0];
+                  3'h2:
+                      \ws2$next  = mz[23:0];
+                  3'h3:
+                      \ws3$next  = mz[23:0];
+                  3'h?:
+                      \ws4$next  = mz[23:0];
+                endcase
+          endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
       1'h1:
+        begin
+          \ws0$next  = 24'h000000;
+          \ws1$next  = 24'h000000;
+          \ws2$next  = 24'h000000;
+          \ws3$next  = 24'h000000;
           \ws4$next  = 24'h000000;
+        end
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    \fb0$next  = fb0;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \x1$next  = x1;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:100" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
       3'h2:
           /* empty */;
-      /* \amaranth.decoding  = "MULT/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:105" */
+      /* \amaranth.decoding  = "MULT_FB/3" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
       3'h3:
-          \fb0$next  = \$47 [23:0];
+          /* empty */;
+      /* \amaranth.decoding  = "MULT_WS/4" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      3'h4:
+          /* empty */;
+      /* \amaranth.decoding  = "ODD/5" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:164" */
+      3'h5:
+          \x1$next  = \$76 [23:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
       1'h1:
-          \fb0$next  = 24'h000000;
+          \x1$next  = 24'h000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    \xd1$next  = xd1;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \x3$next  = x3;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" *)
+          /* empty */;
+      /* \amaranth.decoding  = "EVEN/1" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      3'h1:
+          /* empty */;
+      /* \amaranth.decoding  = "DACK/2" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      3'h2:
+          /* empty */;
+      /* \amaranth.decoding  = "MULT_FB/3" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      3'h3:
+          /* empty */;
+      /* \amaranth.decoding  = "MULT_WS/4" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      3'h4:
+          /* empty */;
+      /* \amaranth.decoding  = "ODD/5" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:164" */
+      3'h5:
+          \x3$next  = \$83 [23:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \x3$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    (* full_case = 32'd1 *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+    casez (\$87 )
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" */
+      1'h1:
+          dac = 24'h3fffff;
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:173" */
+      default:
+          dac = 24'hc00001;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    (* full_case = 32'd1 *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+    casez (\$91 )
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" */
+      1'h1:
+          v = 24'h000001;
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:173" */
+      default:
+          v = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
+    \xd1$next  = xd1;
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      3'h0:
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
             1'h1:
                 \xd1$next  = x1;
           endcase
@@ -915,134 +1250,16 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    \fb1$next  = fb1;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          /* empty */;
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          /* empty */;
-      /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:100" */
-      3'h2:
-          /* empty */;
-      /* \amaranth.decoding  = "MULT/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:105" */
-      3'h3:
-          \fb1$next  = \$52 [23:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \fb1$next  = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    \x1$next  = x1;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          /* empty */;
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          /* empty */;
-      /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:100" */
-      3'h2:
-          /* empty */;
-      /* \amaranth.decoding  = "MULT/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:105" */
-      3'h3:
-          /* empty */;
-      /* \amaranth.decoding  = "ODD/4" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:112" */
-      3'h4:
-          \x1$next  = \$59 [23:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \x1$next  = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    \x3$next  = x3;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          /* empty */;
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          /* empty */;
-      /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:100" */
-      3'h2:
-          /* empty */;
-      /* \amaranth.decoding  = "MULT/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:105" */
-      3'h3:
-          /* empty */;
-      /* \amaranth.decoding  = "ODD/4" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:112" */
-      3'h4:
-          \x3$next  = \$66 [23:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \x3$next  = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" *)
-    casez (\$70 )
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" */
-      1'h1:
-          dac = 24'h3fffff;
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:121" */
-      default:
-          dac = 24'hc00001;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" *)
-    casez (\$74 )
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:118" */
-      1'h1:
-          v = 24'h000001;
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:121" */
-      default:
-          v = 24'h000000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
     \xd2$next  = xd2;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
             1'h1:
                 \xd2$next  = x2;
           endcase
@@ -1054,16 +1271,16 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
     \xd3$next  = xd3;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
             1'h1:
                 \xd3$next  = x3;
           endcase
@@ -1075,16 +1292,16 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
     \xd4$next  = xd4;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
             1'h1:
                 \xd4$next  = x4;
           endcase
@@ -1096,16 +1313,16 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
     \dx0$next  = dx0;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
             1'h1:
                 \dx0$next  = ws0;
           endcase
@@ -1117,18 +1334,18 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
     \dx2$next  = dx2;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
             1'h1:
-                \dx2$next  = \$2 [23:0];
+                \dx2$next  = \$7 [23:0];
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
@@ -1138,18 +1355,18 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$221 ) begin end
     \dx4$next  = dx4;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
             1'h1:
-                \dx4$next  = \$5 [23:0];
+                \dx4$next  = \$10 [23:0];
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
@@ -1158,72 +1375,26 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
           \dx4$next  = 24'h000000;
     endcase
   end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$218 ) begin end
-    \fsm_state$next  = fsm_state;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
-    casez (fsm_state)
-      /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" */
-      3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" *)
-          casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:86" */
-            1'h1:
-                \fsm_state$next  = 3'h1;
-          endcase
-      /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:94" */
-      3'h1:
-          \fsm_state$next  = 3'h2;
-      /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:100" */
-      3'h2:
-          \fsm_state$next  = 3'h3;
-      /* \amaranth.decoding  = "MULT/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:105" */
-      3'h3:
-          \fsm_state$next  = 3'h4;
-      /* \amaranth.decoding  = "ODD/4" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:112" */
-      3'h4:
-          \fsm_state$next  = 3'h0;
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \fsm_state$next  = 3'h0;
-    endcase
-  end
-  assign \$1  = \$2 ;
-  assign \$4  = \$5 ;
-  assign \$7  = \$8 ;
-  assign \$10  = \$11 ;
-  assign \$13  = \$14 ;
+  assign \$1  = \$4 ;
+  assign \$6  = \$7 ;
+  assign \$9  = \$10 ;
   assign \$16  = \$17 ;
-  assign \$19  = \$22 ;
-  assign \$24  = \$27 ;
-  assign \$29  = \$32 ;
-  assign \$34  = \$37 ;
-  assign \$39  = \$42 ;
-  assign \$44  = \$47 ;
-  assign \$49  = \$52 ;
-  assign \$54  = \$59 ;
-  assign \$61  = \$66 ;
+  assign \$19  = \$20 ;
+  assign \$22  = \$23 ;
+  assign \$25  = \$26 ;
+  assign \$30  = \$31 ;
+  assign \$35  = \$36 ;
+  assign \$71  = \$76 ;
+  assign \$78  = \$83 ;
   assign signal_out = v[0];
-  assign \$22  = { \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71], \$20 [71:24] };
-  assign \$27  = { \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71], \$25 [71:24] };
-  assign \$32  = { \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71], \$30 [71:24] };
-  assign \$37  = { \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71], \$35 [71:24] };
-  assign \$42  = { \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71], \$40 [71:24] };
-  assign \$47  = { \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71], \$45 [71:24] };
-  assign \$52  = { \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71], \$50 [71:24] };
+  assign mz = \$4 [24:0];
+  assign \$4  = { \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49], \$2 [49:24] };
 endmodule
 
 (* \amaranth.hierarchy  = "PCM2PDM.fir" *)
 (* generator = "Amaranth" *)
 module fir(signal_out, enable_in, rst, clk, signal_in);
-  reg \$auto$verilog_backend.cc:2082:dump_module$219  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$222  = 0;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
   wire \$1 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
@@ -2724,6 +2895,12 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
   assign \$4  = ix + (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:110" *) 1'h1;
   assign \$6  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 8'hb3;
   always @(posedge clk)
+    x111 <= \x111$next ;
+  always @(posedge clk)
+    x110 <= \x110$next ;
+  always @(posedge clk)
+    x109 <= \x109$next ;
+  always @(posedge clk)
     x108 <= \x108$next ;
   always @(posedge clk)
     x107 <= \x107$next ;
@@ -3087,14 +3264,8 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     x113 <= \x113$next ;
   always @(posedge clk)
     x112 <= \x112$next ;
-  always @(posedge clk)
-    x111 <= \x111$next ;
-  always @(posedge clk)
-    x110 <= \x110$next ;
-  always @(posedge clk)
-    x109 <= \x109$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \ix$next  = ix;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -3128,7 +3299,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \a$next  = a;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -3523,7 +3694,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x5$next  = x5;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3538,7 +3709,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x95$next  = x95;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3553,7 +3724,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x96$next  = x96;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3568,7 +3739,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x97$next  = x97;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3583,7 +3754,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x98$next  = x98;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3598,7 +3769,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x99$next  = x99;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3613,7 +3784,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x100$next  = x100;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3628,7 +3799,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x101$next  = x101;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3643,7 +3814,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x102$next  = x102;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3658,7 +3829,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x103$next  = x103;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3673,7 +3844,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x104$next  = x104;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3688,7 +3859,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x6$next  = x6;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3703,7 +3874,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x105$next  = x105;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3718,7 +3889,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x106$next  = x106;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3733,7 +3904,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x107$next  = x107;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3748,7 +3919,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x108$next  = x108;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3763,7 +3934,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x109$next  = x109;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3778,7 +3949,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x110$next  = x110;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3793,7 +3964,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x111$next  = x111;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3808,7 +3979,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x112$next  = x112;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3823,7 +3994,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x113$next  = x113;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3838,7 +4009,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x114$next  = x114;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3853,7 +4024,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x7$next  = x7;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3868,7 +4039,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x115$next  = x115;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3883,7 +4054,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x116$next  = x116;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3898,7 +4069,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x117$next  = x117;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3913,7 +4084,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x118$next  = x118;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3928,7 +4099,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x119$next  = x119;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3943,7 +4114,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x120$next  = x120;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3958,7 +4129,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x121$next  = x121;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3973,7 +4144,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x122$next  = x122;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -3988,7 +4159,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x123$next  = x123;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4003,7 +4174,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x124$next  = x124;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4018,7 +4189,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x8$next  = x8;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4033,7 +4204,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x125$next  = x125;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4048,7 +4219,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x126$next  = x126;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4063,7 +4234,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x127$next  = x127;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4078,7 +4249,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x128$next  = x128;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4093,7 +4264,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x129$next  = x129;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4108,7 +4279,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x130$next  = x130;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4123,7 +4294,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x131$next  = x131;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4138,7 +4309,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x132$next  = x132;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4153,7 +4324,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x133$next  = x133;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4168,7 +4339,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x134$next  = x134;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4183,7 +4354,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x9$next  = x9;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4198,7 +4369,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x135$next  = x135;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4213,7 +4384,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x136$next  = x136;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4228,7 +4399,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x137$next  = x137;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4243,7 +4414,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x138$next  = x138;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4258,7 +4429,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x139$next  = x139;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4273,7 +4444,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x140$next  = x140;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4288,7 +4459,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x141$next  = x141;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4303,7 +4474,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x142$next  = x142;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4318,7 +4489,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x143$next  = x143;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4333,7 +4504,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x144$next  = x144;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4348,7 +4519,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x10$next  = x10;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4363,7 +4534,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x145$next  = x145;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4378,7 +4549,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x146$next  = x146;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4393,7 +4564,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x147$next  = x147;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4408,7 +4579,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x148$next  = x148;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4423,7 +4594,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x149$next  = x149;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4438,7 +4609,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x150$next  = x150;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4453,7 +4624,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x151$next  = x151;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4468,7 +4639,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x152$next  = x152;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4483,7 +4654,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x153$next  = x153;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4498,7 +4669,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x154$next  = x154;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4513,7 +4684,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x11$next  = x11;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4528,7 +4699,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x155$next  = x155;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4543,7 +4714,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x156$next  = x156;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4558,7 +4729,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x157$next  = x157;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4573,7 +4744,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x158$next  = x158;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4588,7 +4759,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x159$next  = x159;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4603,7 +4774,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x160$next  = x160;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4618,7 +4789,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x161$next  = x161;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4633,7 +4804,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x162$next  = x162;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4648,7 +4819,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x163$next  = x163;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4663,7 +4834,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x164$next  = x164;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4678,7 +4849,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x12$next  = x12;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4693,7 +4864,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x165$next  = x165;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4708,7 +4879,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x166$next  = x166;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4723,7 +4894,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x167$next  = x167;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4738,7 +4909,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x168$next  = x168;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4753,7 +4924,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x169$next  = x169;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4768,7 +4939,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x170$next  = x170;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4783,7 +4954,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x171$next  = x171;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4798,7 +4969,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x172$next  = x172;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4813,7 +4984,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x173$next  = x173;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4828,7 +4999,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x174$next  = x174;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4843,7 +5014,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x13$next  = x13;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4858,7 +5029,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x175$next  = x175;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4873,7 +5044,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x176$next  = x176;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4888,7 +5059,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x177$next  = x177;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4903,7 +5074,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x178$next  = x178;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4918,7 +5089,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x0$next  = x0;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4933,7 +5104,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x14$next  = x14;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -4948,7 +5119,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \b$next  = b;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -5343,7 +5514,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x15$next  = x15;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5358,7 +5529,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x16$next  = x16;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5373,7 +5544,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x17$next  = x17;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5388,7 +5559,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x18$next  = x18;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5403,7 +5574,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x19$next  = x19;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5418,7 +5589,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x20$next  = x20;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5433,7 +5604,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x21$next  = x21;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5448,7 +5619,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x22$next  = x22;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5463,7 +5634,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x23$next  = x23;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5478,7 +5649,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x24$next  = x24;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5493,7 +5664,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \madd$next  = madd;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -5518,7 +5689,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x25$next  = x25;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5533,7 +5704,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x26$next  = x26;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5548,7 +5719,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x27$next  = x27;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5563,7 +5734,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x28$next  = x28;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5578,7 +5749,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x29$next  = x29;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5593,7 +5764,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x30$next  = x30;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5608,7 +5779,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x31$next  = x31;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5623,7 +5794,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x32$next  = x32;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5638,7 +5809,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x33$next  = x33;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5653,7 +5824,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x34$next  = x34;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5668,7 +5839,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -5702,7 +5873,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x35$next  = x35;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5717,7 +5888,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x36$next  = x36;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5732,7 +5903,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x37$next  = x37;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5747,7 +5918,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x38$next  = x38;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5762,7 +5933,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x39$next  = x39;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5777,7 +5948,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x40$next  = x40;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5792,7 +5963,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x41$next  = x41;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5807,7 +5978,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x42$next  = x42;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5822,7 +5993,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x43$next  = x43;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5837,7 +6008,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x44$next  = x44;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5852,7 +6023,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \signal_out$next  = signal_out;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -5876,7 +6047,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x45$next  = x45;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5891,7 +6062,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x46$next  = x46;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5906,7 +6077,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x47$next  = x47;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5921,7 +6092,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x48$next  = x48;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5936,7 +6107,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x49$next  = x49;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5951,7 +6122,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x50$next  = x50;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5966,7 +6137,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x51$next  = x51;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5981,7 +6152,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x52$next  = x52;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -5996,7 +6167,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x53$next  = x53;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6011,7 +6182,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x54$next  = x54;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6026,7 +6197,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x1$next  = x1;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6041,7 +6212,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x55$next  = x55;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6056,7 +6227,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x56$next  = x56;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6071,7 +6242,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x57$next  = x57;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6086,7 +6257,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x58$next  = x58;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6101,7 +6272,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x59$next  = x59;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6116,7 +6287,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x60$next  = x60;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6131,7 +6302,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x61$next  = x61;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6146,7 +6317,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x62$next  = x62;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6161,7 +6332,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x63$next  = x63;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6176,7 +6347,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x64$next  = x64;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6191,7 +6362,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x2$next  = x2;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6206,7 +6377,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x65$next  = x65;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6221,7 +6392,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x66$next  = x66;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6236,7 +6407,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x67$next  = x67;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6251,7 +6422,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x68$next  = x68;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6266,7 +6437,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x69$next  = x69;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6281,7 +6452,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x70$next  = x70;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6296,7 +6467,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x71$next  = x71;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6311,7 +6482,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x72$next  = x72;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6326,7 +6497,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x73$next  = x73;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6341,7 +6512,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x74$next  = x74;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6356,7 +6527,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x3$next  = x3;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6371,7 +6542,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x75$next  = x75;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6386,7 +6557,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x76$next  = x76;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6401,7 +6572,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x77$next  = x77;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6416,7 +6587,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x78$next  = x78;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6431,7 +6602,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x79$next  = x79;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6446,7 +6617,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x80$next  = x80;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6461,7 +6632,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x81$next  = x81;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6476,7 +6647,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x82$next  = x82;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6491,7 +6662,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x83$next  = x83;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6506,7 +6677,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x84$next  = x84;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6521,7 +6692,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x4$next  = x4;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6536,7 +6707,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x85$next  = x85;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6551,7 +6722,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x86$next  = x86;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6566,7 +6737,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x87$next  = x87;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6581,7 +6752,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x88$next  = x88;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6596,7 +6767,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x89$next  = x89;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6611,7 +6782,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x90$next  = x90;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6626,7 +6797,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x91$next  = x91;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6641,7 +6812,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x92$next  = x92;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6656,7 +6827,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x93$next  = x93;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -6671,7 +6842,7 @@ module fir(signal_out, enable_in, rst, clk, signal_in);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$219 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$222 ) begin end
     \x94$next  = x94;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)

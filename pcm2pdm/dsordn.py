@@ -21,13 +21,14 @@ class FixedPointDeltaSigmaModulator(Elaboratable):
                  osr:            int=64,
                  hinf:           float=1.5,
                  f0:             float=0.,
+                 mul_loop:       bool=False,
                  verbose:        bool=True) -> None:
 
         self.signal_in = Signal(signed(bitwidth))
         self.signal_out = Signal()
         self.strobe_in = Signal()
 
-        assert order % 2 == 1, f"only odd order is supported"
+        assert order % 2 == 1 and order > 1, f"only odd order > 1 is supported"
         self.order = order
 
         ntf = synthesizeNTF(order, osr, 2, hinf, f0)
@@ -35,11 +36,14 @@ class FixedPointDeltaSigmaModulator(Elaboratable):
 
         self.bitwidth = bitwidth
         self.fraction_width = fraction_width
+        assert bitwidth <= fraction_width, f"Bitwidth {bitwidth} must not exceed  {fraction_width}"
         self.b = [int(x * 2**fraction_width) for x in b]
         if order > 3:
             self.g = [int(-x * 2**fraction_width) for x in g]
         elif order == 3:
             self.g = [int(-g * 2**fraction_width)]
+
+        self.mul_loop = mul_loop
 
         if verbose:
             print(f"deltasigma CRFB order {order} osr {osr} Hinf {hinf} f0 {f0}")
@@ -57,7 +61,8 @@ class FixedPointDeltaSigmaModulator(Elaboratable):
 
         bw = self.bitwidth
         fbw = self.fraction_width
-        width = bw + fbw
+        # one more bit is needed for signed mult >> shift
+        width = max(bw, fbw) + 1
         n = self.order
 
         x = Array(Signal(signed(bw), name=f"x{i}") for i in range(n))
@@ -78,6 +83,14 @@ class FixedPointDeltaSigmaModulator(Elaboratable):
         # weighted sum and feedback
         ws = Array(Signal(signed(bw), name=f"ws{i}") for i in range(n))
         fb = Array(Signal(signed(bw), name=f"fb{i}") for i in range(n//2))
+
+        mul_loop = self.mul_loop
+        if mul_loop:
+            ix = Signal(range(n+1))
+            ma = Signal(signed(width))
+            mb = Signal(signed(width))
+            mz = Signal(signed(width))
+            m.d.comb += mz.eq((ma * mb) >> fbw),
 
         m.d.comb += self.signal_out.eq(v)
 
@@ -100,14 +113,53 @@ class FixedPointDeltaSigmaModulator(Elaboratable):
             with m.State("DACK"):
                 # assume a[i] = b[i] except for i = n
                 m.d.sync += s.eq(u - dac)
-                m.next = "MULT"
+                if mul_loop:
+                    m.d.sync += [
+                        ix.eq(0),
+                        ma.eq(g[0]),
+                        mb.eq(x[2])
+                    ]
+                    m.next = "MULT_FB"
+                else:
+                    m.next = "MULT"
 
-            with m.State("MULT"):
-                for i in range(n):
-                    m.d.sync += ws[i].eq((b[i] * s) >> fbw)
-                for i in range(n//2):
-                    m.d.sync += fb[i].eq((g[i] * x[2*i+2]) >> fbw)
-                m.next = "ODD"
+            if mul_loop:
+                with m.State("MULT_FB"):
+                    with m.If(ix == n//2-1):
+                        m.d.sync += [
+                            fb[ix].eq(mz),
+                            ma.eq(b[0]),
+                            mb.eq(s),
+                            ix.eq(0)
+                        ]
+                        m.next = "MULT_WS"
+                    with m.Else():
+                        m.d.sync += [
+                            fb[ix].eq(mz),
+                            ma.eq(g[ix+1]),
+                            mb.eq(x[2*ix+4]),
+                            ix.eq(ix+1)
+                        ]
+
+                with m.State("MULT_WS"):
+                    with m.If(ix == n-1):
+                        m.d.sync += ws[ix].eq(mz)
+                        m.next = "ODD"
+                    with m.Else():
+                        m.d.sync += [
+                            ws[ix].eq(mz),
+                            ma.eq(b[ix+1]),
+                            # mb.eq(s),
+                            ix.eq(ix+1)
+                        ]
+
+            else:
+                with m.State("MULT"):
+                    for i in range(n):
+                        m.d.sync += ws[i].eq((b[i] * s) >> fbw)
+                    for i in range(n//2):
+                        m.d.sync += fb[i].eq((g[i] * x[2*i+2]) >> fbw)
+                    m.next = "ODD"
 
             with m.State("ODD"):
                 # odd: integrator with input and feedback
@@ -126,15 +178,15 @@ class FixedPointDeltaSigmaModulator(Elaboratable):
 
 class FixedPointDeltaSigmaModulatorTest(GatewareTestCase):
     FRAGMENT_UNDER_TEST = FixedPointDeltaSigmaModulator
-    FRAGMENT_ARGUMENTS = dict(osr=32)
+    FRAGMENT_ARGUMENTS = dict(osr=32, mul_loop=True)
 
     @sync_test_case
     def test_dsordn(self):
         dut = self.dut
         N = 8192
         ftest = 0.1
-        # strobe_in period = 8 clk
-        u =[int(0.5*sin(2*pi*i/(8*N*ftest)) * (2**17-1)) for i in range(8192)]
+        # strobe_in period = 28 clk
+        u =[int(0.5*sin(2*pi*i/(28*N*ftest)) * (2**17-1)) for i in range(8192)]
 
         count = 0
         for i in range(N):
@@ -144,9 +196,6 @@ class FixedPointDeltaSigmaModulatorTest(GatewareTestCase):
             yield
             yield dut.strobe_in.eq(0)
             yield
-            yield
-            yield
-            yield
-            yield
-            yield
+            for _ in range(28-3):
+                yield
             count = count + 1

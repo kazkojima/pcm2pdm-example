@@ -31,7 +31,8 @@ class PDMout(Module, AutoCSR):
         ]
 
         # PCM2PDM side
-        self.pcm_data = pcm_data = Signal((24, True))
+        bw = 24
+        self.pcm_data = pcm_data = Signal((bw, True))
         self.pcm_strobe_in = pcm_strobe_in = Signal()
         self.pcm_ready = Signal()
         pcm_s16 = Signal((16, True))
@@ -39,8 +40,8 @@ class PDMout(Module, AutoCSR):
         self.comb += [
             fifo.source.ready.eq(pcm_strobe_in),
             pcm_s16.eq(fifo.source.data),
-            # scale for 24-bit without overflow
-            self.pcm_data.eq(pcm_s16 << 6),
+            # scale for bit width without overflow
+            self.pcm_data.eq(pcm_s16 << (bw-16-2)),
             self.pcm_ready.eq(fifo.source.valid)
         ]
 
