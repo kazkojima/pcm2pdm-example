@@ -6,9 +6,13 @@ PCM2PDM provides a minimal PCM to PDM pipeline.
 
 ![Filter Pipeline](https://github.com/kazkojima/pcm2pdm-example/blob/main/doc/filter-pipeline.png)
 
-The FIR lowpass filter in the pipeline is implemented with the Amaranth HDL as an [amlib](https://github.com/amaranth-community-unofficial/amlib) library. The default Delta-Sigma modulator is a 5-order CRFB modulator. Only odd order modulator is supported.
+The FIR lowpass filter in the pipeline is implemented with the Amaranth HDL as an [amlib](https://github.com/amaranth-community-unofficial/amlib) library.
 
 ![FIR lowpass filter](https://github.com/kazkojima/pcm2pdm-example/blob/main/doc/fir-fig.png)
+
+The default Delta-Sigma modulator is a 5-order CRFB modulator. Only odd order modulator is supported. The coefficients of modulator are generated with [python-deltasigma](http://www.python-deltasigma.io) ([1]).
+
+![(2n+1)-order CRFB modulator](https://github.com/kazkojima/pcm2pdm-example/blob/main/doc/deltasigma-crfb.png)
 
 ![Delta Sigma Modulator: NTF and Spectrum](https://github.com/kazkojima/pcm2pdm-example/blob/main/doc/deltasigma-ord5-osr48.png)
 
