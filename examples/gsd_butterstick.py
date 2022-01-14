@@ -165,7 +165,7 @@ class BaseSoC(SoCCore):
         #     IOStandard("LVCMOS33")
         # ),
         # in _io_r1_0 litex-boards's platform/gsd_butterstick.py
-        self.submodules.pdmout = pdmout = PDMout(platform, platform.request("pdmmic"))
+        self.submodules.pdmout = pdmout = PDMout(platform, platform.request("pdmout"))
 
 # Build --------------------------------------------------------------------------------------------
 
