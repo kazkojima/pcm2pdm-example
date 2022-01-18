@@ -10,7 +10,7 @@ from amaranth.cli import main
 
 from amlib.test import GatewareTestCase, sync_test_case
 from amlib.utils import SimpleClockDivider
-from amlib.dsp import FixedPointFIRFilter
+from amlib.dsp import FixedPointFIRFilter, FixedPointHBFilter
 
 from pcm2pdm.dsord1 import FixedPointDeltaSigmaModulatorOrd1
 from pcm2pdm.dsordn import FixedPointDeltaSigmaModulator
@@ -52,16 +52,19 @@ class PCM2PDM(Elaboratable):
             fir filter cutoff frequency or pass/stop start frequencies
         fir_weight: list
             fir filter ripple/attenuation when pass/stop list is specified
+        hb1_order: int
+            half band filter order
         ds_order: int
             deltasigma modulator order
         """
     def __init__(self,
                  divisor: int=28,
-                 bitwidth: int=24,
-                 fraction_width: int=24,
+                 bitwidth: int=28,
+                 fraction_width: int=28,
                  fs: int=48000,
                  pre_upsample: int=4,
                  post_upsample: int=12,
+                 hb1_order: int=51,
                  fir_order: int=179,
                  fir_cutoff: list=[10000, 14000],
                  fir_weight: list=[0.05, 60],
@@ -77,10 +80,12 @@ class PCM2PDM(Elaboratable):
         assert bitwidth <= fraction_width, f"Bitwidth {bitwidth} must not exceed {fraction_width}"
         self.pre_upsample = pre_upsample
         self.post_upsample = post_upsample
+        assert post_upsample % 2 == 0, f"Post_upsample {post_upsample} must be even"
         self.fs = fs
         self.fir_order = fir_order
         self.fir_cutoff = fir_cutoff
         self.fir_weight = fir_weight
+        self.hb1_order = hb1_order
         self.ds_order = ds_order
 
     def elaborate(self, platform) -> Module:
@@ -100,8 +105,10 @@ class PCM2PDM(Elaboratable):
 
         # Strobe pulses
         count1 = Signal(range(self.post_upsample))
+        count1h = Signal(range(self.post_upsample >> 1))
         count2 = Signal(range(osr))
         strobe0 = Signal() # for delta sigma
+        strobe1h = Signal() # for hb filter
         strobe1 = Signal() # for fir filter
         strobe2 = Signal() # for pcm input
         with m.If(strobe):
@@ -109,18 +116,24 @@ class PCM2PDM(Elaboratable):
                 m.d.sync += count1.eq(self.post_upsample - 1)
             with m.Else():
                 m.d.sync += count1.eq(count1 - 1)
+            with m.If(count1h == 0):
+                m.d.sync += count1h.eq((self.post_upsample >> 1) - 1)
+            with m.Else():
+                m.d.sync += count1h.eq(count1h - 1)
             with m.If(count2 == 0):
                 m.d.sync += count2.eq(osr - 1)
             with m.Else():
                 m.d.sync += count2.eq(count2 - 1)
             m.d.sync += [
                 strobe0.eq(1),
+                strobe1h.eq(count1h == 0),
                 strobe1.eq(count1 == 0),
                 strobe2.eq(count2 == 0)
             ]
         with m.Else():
             m.d.sync += [
                 strobe0.eq(0),
+                strobe1h.eq(0),
                 strobe1.eq(0),
                 strobe2.eq(0)
             ]
@@ -136,6 +149,13 @@ class PCM2PDM(Elaboratable):
                                   mac_loop=True,
                                   verbose=False)
         m.submodules.fir = fir
+
+        hb1 = FixedPointHBFilter(bitwidth=bw,
+                                 fraction_width=fbw,
+                                 filter_order=self.hb1_order,
+                                 mac_loop=True,
+                                 verbose=False)
+        m.submodules.hb1 = hb1
 
         if self.ds_order==1:
             ds = FixedPointDeltaSigmaModulatorOrd1(bitwidth=bw,
@@ -153,11 +173,15 @@ class PCM2PDM(Elaboratable):
             
         with m.If(strobe2):
             m.d.comb += fir.signal_in.eq(self.pcm_data_in)
-        m.d.comb += ds.signal_in.eq(fir.signal_out * self.pre_upsample)
+        with m.If(strobe1):
+            m.d.comb += hb1.signal_in.eq(fir.signal_out * self.pre_upsample)
+        m.d.comb += ds.signal_in.eq(hb1.signal_out * 2)
+        #m.d.comb += ds.signal_in.eq(fir.signal_out * self.pre_upsample)
 
         m.d.comb += [
             self.pcm_strobe_in.eq(strobe2),
             fir.enable_in.eq(strobe1),
+            hb1.strobe_in.eq(strobe1h),
             ds.strobe_in.eq(strobe0),
             self.pdm_data_out.eq(ds.signal_out)
         ]
@@ -166,7 +190,7 @@ class PCM2PDM(Elaboratable):
 
 class PCM2PDMTest(GatewareTestCase):
     FRAGMENT_UNDER_TEST = PCM2PDM
-    FRAGMENT_ARGUMENTS = dict(divisor=28, bitwidth=18, fraction_width=18)
+    FRAGMENT_ARGUMENTS = dict(divisor=28, bitwidth=18, fraction_width=18, ds_order=3)
 
     @sync_test_case
     def test_pcm2pdm(self):
