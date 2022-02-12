@@ -18,7 +18,7 @@ The default Delta-Sigma modulator is a 5-order CRFB modulator. Only odd order mo
 
 ![Delta Sigma Modulator: NTF and Spectrum](https://github.com/kazkojima/pcm2pdm-example/blob/main/doc/deltasigma-ord5-osr48.png)
 
-examples/gsd_butterstick.py is a running example using LiteX on Greg Davill's ButterStick board. It consumes 8 (resp. 2) multipliers when 24-bit (resp. 18-bit) width arithmetic is specified for the default 5-order modulator. One can reduce the number of required multipliers to 3 (resp. 1) by selecting order 1 delta sigma modulator with ds_order=1 in the PCM2PDM constructor, though this will impact the filter characteristics. There's also the issue of ideal tones in this order 1 modulator.
+examples/gsd_butterstick.py is a running example using LiteX on Greg Davill's ButterStick board. It consumes 12 (resp. 3) multipliers when 28-bit (resp. 18-bit) width arithmetic is specified for the default 5-order modulator. One can reduce the number of required multipliers to 6 (resp. 2) by selecting order 1 delta sigma modulator with ds_order=1 in the PCM2PDM constructor, though this will impact the filter characteristics. There's also the issue of ideal tones in this order 1 modulator.
 OTOH, higher order (> 5) delta-sigma modulators require higher precision calculations.
 
 The current implementation works at 64MHz on ButterStick:
@@ -116,3 +116,5 @@ popd
 See also its fork ['Add Python 3.9 & scipy 1.7.0 support'](https://github.com/Y-F-Acoustics/python-deltasigma) by Y. Fukuda.
 
 [2] Tom Verbeure, [PDM Microphones and Sigma-Delta A/D Conversion](https://tomverbeure.github.io/2020/10/04/PDM-Microphones-and-Sigma-Delta-Conversion.html)
+
+[3] Shanthi Pavan, Richard Schreier, Gabor C. Temes, Understanding Delta-Sigma Data Converters, 2nd Edition, ISBN: 978-1-119-25827-8, Wiley-IEEE Press, Jan. 2017

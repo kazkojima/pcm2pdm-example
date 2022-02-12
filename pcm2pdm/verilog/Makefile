@@ -3,7 +3,7 @@ verilog_files = pcm2pdm.v
 
 all: $(verilog_files)
 
-pcm2pdm.v: $(top)/pcm2pdm/pcm2pdm.py $(top)/pcm2pdm/dsordn.py
+pcm2pdm.v: $(top)/pcm2pdm/pcm2pdm.py $(top)/pcm2pdm/dsmodn.py
 
 %.v:
 	(cd $(top); python -m pcm2pdm.pcm2pdm generate -t v) > $@

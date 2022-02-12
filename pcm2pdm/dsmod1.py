@@ -68,7 +68,7 @@ class FixedPointDeltaSigmaModulatorOrd1Test(GatewareTestCase):
     FRAGMENT_ARGUMENTS = dict(osr=32)
 
     @sync_test_case
-    def test_dsord1(self):
+    def test_dsmod1(self):
         dut = self.dut
         N = 8192
         ftest = 0.1

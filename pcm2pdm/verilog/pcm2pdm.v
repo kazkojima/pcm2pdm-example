@@ -90,11 +90,11 @@ module PCM2PDM(pcm_strobe_in, pdm_data_out, pdm_clock_out, clk, rst, pcm_data_in
   reg [5:0] count2 = 6'h00;
   (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/pcm2pdm.py:109" *)
   reg [5:0] \count2$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:27" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:27" *)
   wire [27:0] ds_signal_in;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:28" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:28" *)
   wire ds_signal_out;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:29" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:29" *)
   wire ds_strobe_in;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:25" *)
   wire fir_enable_in;
@@ -469,265 +469,265 @@ endmodule
 (* generator = "Amaranth" *)
 module ds(strobe_in, signal_out, rst, clk, signal_in);
   reg \$auto$verilog_backend.cc:2082:dump_module$282  = 0;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:93" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:93" *)
   wire [57:0] \$1 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:104" *)
   wire [28:0] \$10 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *)
   wire \$12 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *)
   wire \$14 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:110" *)
   wire [28:0] \$16 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:110" *)
   wire [28:0] \$17 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:110" *)
   wire [28:0] \$19 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:93" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:93" *)
   wire [57:0] \$2 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:110" *)
   wire [28:0] \$20 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:110" *)
   wire [28:0] \$22 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:110" *)
   wire [28:0] \$23 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:115" *)
   wire [28:0] \$25 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:115" *)
   wire [28:0] \$26 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *)
   wire \$28 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:141" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:141" *)
   wire [3:0] \$30 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:141" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:141" *)
   wire [3:0] \$31 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *)
   wire \$33 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:153" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:153" *)
   wire [3:0] \$35 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:153" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:153" *)
   wire [3:0] \$36 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *)
   wire \$38 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:93" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:93" *)
   wire [57:0] \$4 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:139" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:139" *)
   wire [3:0] \$40 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *)
   wire \$42 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:151" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:151" *)
   wire [3:0] \$44 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *)
   wire [28:0] \$46 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *)
   wire \$48 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:77" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:77" *)
   wire [28:0] \$50 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *)
   wire [28:0] \$52 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *)
   wire [4:0] \$53 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *)
   wire [5:0] \$55 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *)
   wire [28:0] \$57 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *)
   wire [28:0] \$59 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:104" *)
   wire [28:0] \$6 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *)
   wire [28:0] \$61 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *)
   wire [28:0] \$63 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *)
   wire [28:0] \$65 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *)
   wire \$67 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *)
   wire \$69 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:104" *)
   wire [28:0] \$7 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *)
   wire [30:0] \$71 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *)
   wire [28:0] \$72 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *)
   wire [29:0] \$74 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *)
   wire [30:0] \$76 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *)
   wire [30:0] \$78 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *)
   wire [28:0] \$79 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *)
   wire [29:0] \$81 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *)
   wire [30:0] \$83 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" *)
   wire [28:0] \$85 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" *)
   wire \$87 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" *)
   wire [28:0] \$89 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:104" *)
   wire [28:0] \$9 ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" *)
   wire \$91 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input clk;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:81" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:81" *)
   reg [27:0] dac;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:70" *)
   reg [27:0] dx0 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:70" *)
   reg [27:0] \dx0$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:70" *)
   reg [27:0] dx2 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:70" *)
   reg [27:0] \dx2$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:70" *)
   reg [27:0] dx4 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:70" *)
   reg [27:0] \dx4$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:85" *)
   reg [27:0] fb0 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:85" *)
   reg [27:0] \fb0$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:85" *)
   reg [27:0] fb1 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:85" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:85" *)
   reg [27:0] \fb1$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
   reg [2:0] fsm_state = 3'h0;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
   reg [2:0] \fsm_state$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:89" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:89" *)
   reg [2:0] ix = 3'h0;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:89" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:89" *)
   reg [2:0] \ix$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:90" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:90" *)
   reg [28:0] ma = 29'h00000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:90" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:90" *)
   reg [28:0] \ma$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:91" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:91" *)
   reg [28:0] mb = 29'h00000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:91" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:91" *)
   reg [28:0] \mb$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:92" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:92" *)
   wire [28:0] mz;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input rst;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:77" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:77" *)
   reg [27:0] s = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:77" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:77" *)
   reg [27:0] \s$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:27" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:27" *)
   input [27:0] signal_in;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:28" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:28" *)
   output signal_out;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:29" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:29" *)
   input strobe_in;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:79" *)
   reg [27:0] v;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:84" *)
   reg [27:0] ws0 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:84" *)
   reg [27:0] \ws0$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:84" *)
   reg [27:0] ws1 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:84" *)
   reg [27:0] \ws1$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:84" *)
   reg [27:0] ws2 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:84" *)
   reg [27:0] \ws2$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:84" *)
   reg [27:0] ws3 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:84" *)
   reg [27:0] \ws3$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:84" *)
   reg [27:0] ws4 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:84" *)
   reg [27:0] \ws4$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *)
   reg [27:0] x0 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *)
   reg [27:0] \x0$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *)
   reg [27:0] x1 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *)
   reg [27:0] \x1$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *)
   reg [27:0] x2 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *)
   reg [27:0] \x2$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *)
   reg [27:0] x3 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *)
   reg [27:0] \x3$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *)
   reg [27:0] x4 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *)
   reg [27:0] \x4$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:72" *)
   reg [27:0] xd0 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:72" *)
   reg [27:0] \xd0$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:72" *)
   reg [27:0] xd1 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:72" *)
   reg [27:0] \xd1$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:72" *)
   reg [27:0] xd2 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:72" *)
   reg [27:0] \xd2$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:72" *)
   reg [27:0] xd3 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:72" *)
   reg [27:0] \xd3$next ;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:72" *)
   reg [27:0] xd4 = 28'h0000000;
-  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:72" *)
   reg [27:0] \xd4$next ;
-  assign \$10  = $signed(x3) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *) $signed(ws4);
-  assign \$12  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *) 1'h1;
-  assign \$14  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *) 3'h4;
-  assign \$17  = $signed(xd0) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *) $signed(dx0);
-  assign \$20  = $signed(xd2) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *) $signed(dx2);
-  assign \$23  = $signed(xd4) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:110" *) $signed(dx4);
-  assign \$26  = $signed(signal_in) - (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:115" *) $signed(dac);
-  assign \$28  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *) 1'h1;
-  assign \$2  = $signed(ma) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:93" *) $signed(mb);
-  assign \$31  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:141" *) 1'h1;
-  assign \$33  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *) 3'h4;
-  assign \$36  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:153" *) 1'h1;
-  assign \$38  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *) 1'h1;
-  assign \$40  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:139" *) 1'h1;
-  assign \$42  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *) 3'h4;
-  assign \$44  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:151" *) 1'h1;
-  assign \$46  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:68" *) $signed(x2);
-  assign \$48  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *) 1'h1;
-  assign \$50  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:77" *) $signed(s);
-  assign \$53  = 2'h2 * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) ix;
-  assign \$55  = \$53  + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) 3'h4;
-  assign \$57  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) $signed(x0);
-  assign \$59  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) $signed(x1);
-  assign \$61  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) $signed(x2);
-  assign \$63  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) $signed(x3);
-  assign \$65  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *) $signed(x4);
-  assign \$67  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *) 1'h1;
-  assign \$69  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *) 3'h4;
-  assign \$72  = $signed(xd1) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(x0);
-  assign \$74  = $signed(\$72 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(ws1);
-  assign \$76  = $signed(\$74 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(fb0);
-  assign \$7  = $signed(x1) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:104" *) $signed(ws2);
-  assign \$79  = $signed(xd3) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(x2);
-  assign \$81  = $signed(\$79 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(ws3);
-  assign \$83  = $signed(\$81 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:167" *) $signed(fb1);
-  assign \$85  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *) $signed(x4);
-  assign \$87  = $signed(\$85 ) >= (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *) $signed(29'h00000000);
-  assign \$89  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *) $signed(x4);
-  assign \$91  = $signed(\$89 ) >= (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *) $signed(29'h00000000);
+  assign \$10  = $signed(x3) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:104" *) $signed(ws4);
+  assign \$12  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *) 1'h1;
+  assign \$14  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *) 3'h4;
+  assign \$17  = $signed(xd0) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:110" *) $signed(dx0);
+  assign \$20  = $signed(xd2) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:110" *) $signed(dx2);
+  assign \$23  = $signed(xd4) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:110" *) $signed(dx4);
+  assign \$26  = $signed(signal_in) - (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:115" *) $signed(dac);
+  assign \$28  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *) 1'h1;
+  assign \$2  = $signed(ma) * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:93" *) $signed(mb);
+  assign \$31  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:141" *) 1'h1;
+  assign \$33  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *) 3'h4;
+  assign \$36  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:153" *) 1'h1;
+  assign \$38  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *) 1'h1;
+  assign \$40  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:139" *) 1'h1;
+  assign \$42  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *) 3'h4;
+  assign \$44  = ix + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:151" *) 1'h1;
+  assign \$46  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:68" *) $signed(x2);
+  assign \$48  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *) 1'h1;
+  assign \$50  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:77" *) $signed(s);
+  assign \$53  = 2'h2 * (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *) ix;
+  assign \$55  = \$53  + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *) 3'h4;
+  assign \$57  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *) $signed(x0);
+  assign \$59  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *) $signed(x1);
+  assign \$61  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *) $signed(x2);
+  assign \$63  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *) $signed(x3);
+  assign \$65  = + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *) $signed(x4);
+  assign \$67  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *) 1'h1;
+  assign \$69  = ix == (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *) 3'h4;
+  assign \$72  = $signed(xd1) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *) $signed(x0);
+  assign \$74  = $signed(\$72 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *) $signed(ws1);
+  assign \$76  = $signed(\$74 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *) $signed(fb0);
+  assign \$7  = $signed(x1) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:104" *) $signed(ws2);
+  assign \$79  = $signed(xd3) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *) $signed(x2);
+  assign \$81  = $signed(\$79 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *) $signed(ws3);
+  assign \$83  = $signed(\$81 ) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:167" *) $signed(fb1);
+  assign \$85  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" *) $signed(x4);
+  assign \$87  = $signed(\$85 ) >= (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" *) $signed(29'h00000000);
+  assign \$89  = $signed(signal_in) + (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" *) $signed(x4);
+  assign \$91  = $signed(\$89 ) >= (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" *) $signed(29'h00000000);
   always @(posedge clk)
     x1 <= \x1$next ;
   always @(posedge clk)
@@ -781,45 +781,45 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \fsm_state$next  = fsm_state;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" */
             1'h1:
                 \fsm_state$next  = 3'h1;
           endcase
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           \fsm_state$next  = 3'h2;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:113" */
       3'h2:
           \fsm_state$next  = 3'h3;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:127" */
       3'h3:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *)
           casez (\$12 )
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" */
             1'h1:
                 \fsm_state$next  = 3'h4;
           endcase
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:144" */
       3'h4:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *)
           casez (\$14 )
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" */
             1'h1:
                 \fsm_state$next  = 3'h5;
           endcase
       /* \amaranth.decoding  = "ODD/5" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:164" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:164" */
       3'h5:
           \fsm_state$next  = 3'h0;
     endcase
@@ -832,14 +832,14 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \x0$next  = x0;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           \x0$next  = \$17 [27:0];
     endcase
@@ -852,14 +852,14 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \x2$next  = x2;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           \x2$next  = \$20 [27:0];
     endcase
@@ -872,14 +872,14 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \x4$next  = x4;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           \x4$next  = \$23 [27:0];
     endcase
@@ -892,18 +892,18 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \s$next  = s;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:113" */
       3'h2:
           \s$next  = \$26 [27:0];
     endcase
@@ -916,43 +916,43 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \ix$next  = ix;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:113" */
       3'h2:
           \ix$next  = 3'h0;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:127" */
       3'h3:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *)
           casez (\$28 )
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" */
             1'h1:
                 \ix$next  = 3'h0;
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:136" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:136" */
             default:
                 \ix$next  = \$31 [2:0];
           endcase
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:144" */
       3'h4:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *)
           casez (\$33 )
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" */
             1'h1:
                 /* empty */;
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:148" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:148" */
             default:
                 \ix$next  = \$36 [2:0];
           endcase
@@ -966,33 +966,33 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \ma$next  = ma;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:113" */
       3'h2:
           \ma$next  = 29'h1ffae9c1;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:127" */
       3'h3:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *)
           casez (\$38 )
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" */
             1'h1:
                 \ma$next  = 29'h0002b89e;
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:136" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:136" */
             default:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:139" *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:139" *)
                 casez (\$40 )
                   4'h0:
                       \ma$next  = 29'h1ffae9c1;
@@ -1001,18 +1001,18 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
                 endcase
           endcase
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:144" */
       3'h4:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *)
           casez (\$42 )
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" */
             1'h1:
                 /* empty */;
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:148" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:148" */
             default:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:151" *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:151" *)
                 casez (\$44 )
                   4'h0:
                       \ma$next  = 29'h0002b89e;
@@ -1038,33 +1038,33 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \mb$next  = mb;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:113" */
       3'h2:
           \mb$next  = \$46 ;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:127" */
       3'h3:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *)
           casez (\$48 )
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" */
             1'h1:
                 \mb$next  = \$50 ;
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:136" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:136" */
             default:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:140" *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:140" *)
                 casez (\$55 )
                   6'h00:
                       \mb$next  = \$57 ;
@@ -1089,40 +1089,40 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \fb0$next  = fb0;
     \fb1$next  = fb1;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:113" */
       3'h2:
           /* empty */;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:127" */
       3'h3:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" *)
           casez (\$67 )
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:128" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:128" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:130" *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:130" *)
                 casez (ix)
                   3'h0:
                       \fb0$next  = mz[27:0];
                   3'h?:
                       \fb1$next  = mz[27:0];
                 endcase
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:136" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:136" */
             default:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:138" *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:138" *)
                 casez (ix)
                   3'h0:
                       \fb0$next  = mz[27:0];
@@ -1143,14 +1143,14 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \xd0$next  = xd0;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" */
             1'h1:
                 \xd0$next  = x0;
           endcase
@@ -1168,34 +1168,34 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
     \ws2$next  = ws2;
     \ws3$next  = ws3;
     \ws4$next  = ws4;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:113" */
       3'h2:
           /* empty */;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:127" */
       3'h3:
           /* empty */;
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:144" */
       3'h4:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" *)
           casez (\$69 )
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:145" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:145" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:146" *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:146" *)
                 casez (ix)
                   3'h0:
                       \ws0$next  = mz[27:0];
@@ -1208,10 +1208,10 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
                   3'h?:
                       \ws4$next  = mz[27:0];
                 endcase
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:148" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:148" */
             default:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:150" *)
+                (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:150" *)
                 casez (ix)
                   3'h0:
                       \ws0$next  = mz[27:0];
@@ -1241,30 +1241,30 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \x1$next  = x1;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:113" */
       3'h2:
           /* empty */;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:127" */
       3'h3:
           /* empty */;
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:144" */
       3'h4:
           /* empty */;
       /* \amaranth.decoding  = "ODD/5" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:164" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:164" */
       3'h5:
           \x1$next  = \$76 [27:0];
     endcase
@@ -1277,30 +1277,30 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \x3$next  = x3;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:113" */
       3'h2:
           /* empty */;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:127" */
       3'h3:
           /* empty */;
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:144" */
       3'h4:
           /* empty */;
       /* \amaranth.decoding  = "ODD/5" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:164" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:164" */
       3'h5:
           \x3$next  = \$83 [27:0];
     endcase
@@ -1313,12 +1313,12 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" *)
     casez (\$87 )
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" */
       1'h1:
           dac = 28'h3ffffff;
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:173" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:173" */
       default:
           dac = 28'hc000001;
     endcase
@@ -1326,12 +1326,12 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" *)
     casez (\$91 )
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:170" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:170" */
       1'h1:
           v = 28'h0000001;
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:173" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:173" */
       default:
           v = 28'h0000000;
     endcase
@@ -1339,14 +1339,14 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \xd1$next  = xd1;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" */
             1'h1:
                 \xd1$next  = x1;
           endcase
@@ -1360,14 +1360,14 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \xd2$next  = xd2;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" */
             1'h1:
                 \xd2$next  = x2;
           endcase
@@ -1381,14 +1381,14 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \xd3$next  = xd3;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" */
             1'h1:
                 \xd3$next  = x3;
           endcase
@@ -1402,14 +1402,14 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \xd4$next  = xd4;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" */
             1'h1:
                 \xd4$next  = x4;
           endcase
@@ -1423,14 +1423,14 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \dx0$next  = dx0;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" */
             1'h1:
                 \dx0$next  = ws0;
           endcase
@@ -1444,14 +1444,14 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \dx2$next  = dx2;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" */
             1'h1:
                 \dx2$next  = \$7 [27:0];
           endcase
@@ -1465,14 +1465,14 @@ module ds(strobe_in, signal_out, rst, clk, signal_in);
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$282 ) begin end
     \dx4$next  = dx4;
-    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/pcm2pdm-example/pcm2pdm/dsmodn.py:99" */
             1'h1:
                 \dx4$next  = \$10 [27:0];
           endcase
