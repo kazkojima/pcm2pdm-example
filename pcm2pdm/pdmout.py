@@ -41,7 +41,9 @@ class PDMout(Module, AutoCSR):
             fifo.source.ready.eq(pcm_strobe_in),
             pcm_s16.eq(fifo.source.data),
             # scale for bit width without overflow
-            self.pcm_data.eq(pcm_s16 << (bw-16-3)),
+            # theoritically 1/4 of bw is enough, but computational errors
+            # can make unexpected overflow. 3/16 will be ok
+            self.pcm_data.eq((pcm_s16 + (pcm_s16 << 1)) << (bw-16-4)),
             self.pcm_ready.eq(fifo.source.valid)
         ]
 
